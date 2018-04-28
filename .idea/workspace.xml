@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c56728-0d26-4af7-86b9-d067d62338be" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/classes/PaneFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/AccountWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/BranchWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/CustomerWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/StaffWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/WindowInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/SecondMenuWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/add/AccountWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/add/BranchWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/add/StaffWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainWindow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/MainWindow.fxml" afterDir="false" />
     </list>
@@ -20,39 +36,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="SecondMenuWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/SecondMenuWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding>
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
-                <element signature="e#333#334#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/MainWindow.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/MainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="240">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountWindow.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BranchWindow.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerWindow.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaffWindow.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -62,10 +99,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>setBottom</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,9 +116,41 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/resources/MainWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/controllers/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/resources/addMenu.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/AddMenu.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/Branch.java" />
+        <option value="$PROJECT_DIR$/src/resources/Branch.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/PaneFrame.java" />
+        <option value="$PROJECT_DIR$/src/resources/PaneFrame.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/PaneFrame.java" />
+        <option value="$PROJECT_DIR$/src/resources/StaffWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/BranchWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/add/Customer.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/add/AddMenu.java" />
+        <option value="$PROJECT_DIR$/src/classes/PaneFrame.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AddMenu.java" />
+        <option value="$PROJECT_DIR$/src/controllers/SecondMenu.java" />
+        <option value="$PROJECT_DIR$/src/resources/MainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/SecondMenuWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/add/BranchWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/controllers/add/CustomerWindow.java" />
+        <option value="$PROJECT_DIR$/src/controllers/add/StaffWindow.java" />
+        <option value="$PROJECT_DIR$/src/controllers/add/AccountWindow.java" />
+        <option value="$PROJECT_DIR$/src/controllers/add/BranchWindow.java" />
+        <option value="$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/add/StaffWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/add/AccountWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/classes/Main.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AccountWindow.java" />
+        <option value="$PROJECT_DIR$/src/controllers/StaffWindow.java" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/Customer.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" />
+        <option value="$PROJECT_DIR$/src/controllers/BranchWindow.java" />
       </list>
     </option>
   </component>
@@ -88,9 +163,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1211" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -117,13 +192,39 @@
               <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="viewDeleteUpdate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -139,6 +240,12 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\John\Documents\GitHub\Java Projects\DataBaseDesignProject\src\resources" />
+      <recent name="C:\Users\John\Documents\GitHub\Java Projects\DataBaseDesignProject\src\resources\add" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,7 +266,7 @@
     <configuration name="DBDmain" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="classes.Main" />
       <module name="DataBaseDesignProject" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
@@ -233,15 +340,23 @@
       <workItem from="1524149418726" duration="80000" />
       <workItem from="1524149563941" duration="2224000" />
       <workItem from="1524930889904" duration="65000" />
-      <workItem from="1524931158855" duration="6382000" />
+      <workItem from="1524931158855" duration="23430000" />
     </task>
+    <task id="LOCAL-00001" summary="Started">
+      <created>1524937720769</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524937720769</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8843000" />
+    <option name="totallyTimeSpent" value="25891000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1211" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -254,12 +369,13 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33223322" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20851433" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -268,7 +384,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -280,12 +395,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Started" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#363#364#0" expanded="true" />
             <element signature="e#398#399#0" expanded="true" />
             <element signature="e#309#310#0" expanded="true" />
@@ -312,11 +432,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#363#364#0" expanded="true" />
             <element signature="e#398#399#0" expanded="true" />
             <element signature="e#309#310#0" expanded="true" />
@@ -346,34 +467,196 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/PaneFrame.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/layout/BorderPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="240" column="17" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfaces/WindowInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/PaneFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/MainWindow.fxml">
+    <entry file="file://$PROJECT_DIR$/src/resources/add/StaffWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/add/BranchWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/SecondMenuWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/MainWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="139" lean-forward="true" selection-start-line="26" selection-start-column="139" selection-end-line="26" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccountWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding>
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/AccountWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CustomerWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/StaffWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/BranchWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/SecondMenuWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
         </state>
       </provider>
     </entry>

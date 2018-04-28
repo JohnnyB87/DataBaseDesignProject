@@ -1,3 +1,5 @@
+package classes;
+
 import controllers.MainWindow;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +26,7 @@ public class Main extends Application{
         primaryStage = getPrimaryStage();
         primaryStage.setTitle("Main Menu");
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/MainWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/MainWindow.fxml"));
         Pane mainWindow = loader.load();
         MainWindow mw = loader.getController();
 
