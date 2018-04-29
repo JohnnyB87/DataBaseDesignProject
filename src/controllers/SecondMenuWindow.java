@@ -13,8 +13,6 @@ import java.io.IOException;
 
 public class SecondMenuWindow {
 
-
-
     @FXML
     private Label titleLabel;
     private Pane pane;
