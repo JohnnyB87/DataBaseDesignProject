@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.sql.Connection;
+import java.sql.Statement;
 
 public class BranchWindow {
 
@@ -49,6 +50,20 @@ public class BranchWindow {
 
         if(!this.contin)
             System.out.println("Enter correct input");
+        else{
+            try {
+                // insert
+                Statement insertStmt = con.createStatement();
+                String insertSQL = " Insert into branch values (this.street, 'DTrump', 'SmartGenius', 100)";
+                int res = insertStmt.executeUpdate(insertSQL);
+                System.out.println("The Number or records inserted is      " +res);
+                // You May need to uncomment if Autocommit is not set
+                //con.commit();
+                insertStmt.close();
+            }catch (Exception io) {
+                System.out.println("error"+io);
+            };
+        }
     }
 
     public Label getTitleLabel() {
@@ -66,5 +81,9 @@ public class BranchWindow {
             return Integer.parseInt(s);
         this.contin = false;
         return 0;
+    }
+
+    private void insertToMySQL(){
+
     }
 }
