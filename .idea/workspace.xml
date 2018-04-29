@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15c56728-0d26-4af7-86b9-d067d62338be" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/PaneFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/PaneFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/BranchWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BranchWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/CustomerWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CustomerWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StaffWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StaffWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +17,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+            <state relative-caret-position="541">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,9 +98,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
+    <option name="x" value="950" />
     <option name="width" value="975" />
-    <option name="height" value="1049" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -278,7 +270,7 @@
       <workItem from="1524930889904" duration="65000" />
       <workItem from="1524931158855" duration="24772000" />
       <workItem from="1524968249676" duration="981000" />
-      <workItem from="1524997179201" duration="2448000" />
+      <workItem from="1524997179201" duration="3081000" />
     </task>
     <task id="LOCAL-00001" summary="Started">
       <created>1524937720769</created>
@@ -301,15 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524969172355</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ready to connect database">
+      <created>1524999667366</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524999667366</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30662000" />
+    <option name="totallyTimeSpent" value="31295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -321,7 +319,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2937931" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2937931" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -351,7 +349,8 @@
     <MESSAGE value="Started" />
     <MESSAGE value="Creating delete menus" />
     <MESSAGE value="added fx:id for PaneFrame in account.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fx:id for PaneFrame in account.fxml" />
+    <MESSAGE value="ready to connect database" />
+    <option name="LAST_COMMIT_MESSAGE" value="ready to connect database" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/controllers/SecondMenuWindow.java">
@@ -594,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+        <state relative-caret-position="541">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
