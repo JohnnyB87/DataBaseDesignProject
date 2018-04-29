@@ -9,11 +9,13 @@ import javafx.stage.Stage;
 
 public class PaneFrame extends BorderPane {
 
+    private Button confirmButton;
+
     public PaneFrame(){
-        Button confirmButton = new Button("Confirm");
+        this.confirmButton = new Button("Confirm");
         Button quitButton = new Button("Quit");
 
-        confirmButton.setMinWidth(75);
+        this.confirmButton.setMinWidth(75);
         quitButton.setMinWidth(75);
 
         HBox hBox = new HBox();
@@ -23,21 +25,27 @@ public class PaneFrame extends BorderPane {
 
         hBox.setSpacing(50);
 
-        hBox.getChildren().addAll(confirmButton,quitButton);
+        hBox.getChildren().addAll(this.confirmButton,quitButton);
 
         setAlignment(hBox,Pos.CENTER);
         this.setBottom(hBox);
 
         quitButton.setOnAction(e->quitButtonPressed());
-        confirmButton.setOnAction(e->confirmButtonPressed());
     }
+
+    public Button getConfirmButton() {
+        return confirmButton;
+    }
+
+    public void setConfirmButton(Button confirmButton) {
+        this.confirmButton = confirmButton;
+    }
+
     public void quitButtonPressed() {
         Stage stage = (Stage)this.getScene().getWindow();
         stage.close();
     }
 
-    public void confirmButtonPressed() {
-        System.out.println(this.getCenter());
-    }
+    public void confirmButtonPressed(){}
 
 }
