@@ -46,7 +46,6 @@ public class PaneFrame extends BorderPane {
         stage.close();
     }
 
-    public void confirmButtonPressed() {
-    }
+    public void confirmButtonPressed(){}
 
 }
