@@ -1,5 +1,6 @@
 package controllers;
 
+import classes.PaneFrame;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
@@ -18,5 +19,9 @@ public class AccountWindow {
 
     public Label getTitleLabel() {
         return titleLabel;
+    }
+
+    public void testConfirmButton(){
+
     }
 }

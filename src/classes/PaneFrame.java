@@ -29,6 +29,7 @@ public class PaneFrame extends BorderPane {
         this.setBottom(hBox);
 
         quitButton.setOnAction(e->quitButtonPressed());
+        confirmButton.setOnAction(e->confirmButtonPressed());
     }
     public void quitButtonPressed() {
         Stage stage = (Stage)this.getScene().getWindow();
@@ -36,6 +37,7 @@ public class PaneFrame extends BorderPane {
     }
 
     public void confirmButtonPressed() {
+        System.out.println(this.getCenter());
     }
 
 }

@@ -3,10 +3,13 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class StaffWindow {
 
+    @FXML
+    private TableView tableView;
     @FXML
     private Label titleLabel;
     @FXML
