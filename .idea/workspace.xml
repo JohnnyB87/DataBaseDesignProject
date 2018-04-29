@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c56728-0d26-4af7-86b9-d067d62338be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/classes/PaneFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/AccountWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/BranchWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/CustomerWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/StaffWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/WindowInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/SecondMenuWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/add/AccountWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/add/BranchWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/add/StaffWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/PaneFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/PaneFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AccountWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AccountWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/WindowInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +25,8 @@
       <file leaf-file-name="SecondMenuWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/SecondMenuWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="189">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#838#839#0" expanded="true" />
@@ -54,12 +40,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PaneFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/PaneFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AccountWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AccountWindow.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -68,8 +75,8 @@
         <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="119">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -78,8 +85,8 @@
         <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+            <state relative-caret-position="119">
+              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -88,8 +95,8 @@
         <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="119">
+              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -128,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/resources/BranchWindow.fxml" />
         <option value="$PROJECT_DIR$/src/resources/add/Customer.fxml" />
         <option value="$PROJECT_DIR$/src/controllers/add/AddMenu.java" />
-        <option value="$PROJECT_DIR$/src/classes/PaneFrame.java" />
         <option value="$PROJECT_DIR$/src/controllers/AddMenu.java" />
         <option value="$PROJECT_DIR$/src/controllers/SecondMenu.java" />
         <option value="$PROJECT_DIR$/src/resources/MainWindow.fxml" />
@@ -141,16 +147,18 @@
         <option value="$PROJECT_DIR$/src/controllers/add/BranchWindow.java" />
         <option value="$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml" />
         <option value="$PROJECT_DIR$/src/resources/add/StaffWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/resources/add/AccountWindow.fxml" />
         <option value="$PROJECT_DIR$/src/classes/Main.java" />
-        <option value="$PROJECT_DIR$/src/controllers/AccountWindow.java" />
         <option value="$PROJECT_DIR$/src/controllers/StaffWindow.java" />
-        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" />
         <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/Customer.fxml" />
-        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" />
         <option value="$PROJECT_DIR$/src/controllers/BranchWindow.java" />
+        <option value="$PROJECT_DIR$/src/resources/add/AccountWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/AccountWindow.java" />
+        <option value="$PROJECT_DIR$/src/classes/PaneFrame.java" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml" />
       </list>
     </option>
   </component>
@@ -199,12 +207,6 @@
               <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
@@ -340,7 +342,7 @@
       <workItem from="1524149418726" duration="80000" />
       <workItem from="1524149563941" duration="2224000" />
       <workItem from="1524930889904" duration="65000" />
-      <workItem from="1524931158855" duration="23430000" />
+      <workItem from="1524931158855" duration="24772000" />
     </task>
     <task id="LOCAL-00001" summary="Started">
       <created>1524937720769</created>
@@ -349,11 +351,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524937720769</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creating delete menus">
+      <created>1524959799010</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524959799010</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25891000" />
+    <option name="totallyTimeSpent" value="27233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -369,11 +378,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -397,7 +406,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started" />
+    <MESSAGE value="Creating delete menus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating delete menus" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
@@ -489,40 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/PaneFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/add/StaffWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/add/BranchWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/SecondMenuWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -546,25 +522,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AccountWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding>
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/add/AccountWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -612,10 +569,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/BranchWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/CustomerWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/StaffWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/AccountWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/PaneFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccountWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/SecondMenuWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="189">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#838#839#0" expanded="true" />
@@ -631,32 +637,32 @@
     <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/BranchWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/CustomerWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+        <state relative-caret-position="119">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/StaffWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="119">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
         </state>
       </provider>
     </entry>

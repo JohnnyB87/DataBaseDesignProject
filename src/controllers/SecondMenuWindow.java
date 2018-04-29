@@ -17,16 +17,6 @@ public class SecondMenuWindow {
 
     @FXML
     private Label titleLabel;
-
-
-    @FXML
-    private Button newBranch;
-    @FXML
-    private Button newStaff;
-    @FXML
-    private Button newCustomer;
-    @FXML
-    private Button newAccount;
     private Pane pane;
     private String menuName;
 
