@@ -27,15 +27,19 @@ public class AccountWindow {
     private String description;
     private String accNo;
     private String tableName;
+    private Validator validator;
 
     @FXML
     private void initialize(){
         if(this.paneFrame != null) {
             this.confirmButton = paneFrame.getConfirmButton();
             this.tableName = "account";
-            this.confirmButton.setOnAction(e -> {
-                testConfirmButton();
-            });
+            this.validator = new Validator();
+            if(this.titleLabel.getText().contains("Add")) {
+                this.confirmButton.setOnAction(e -> {
+                    testConfirmButton();
+                });
+            }
         }
     }
 
@@ -44,7 +48,7 @@ public class AccountWindow {
     }
 
     public void testConfirmButton(){
-        Validator validator = new Validator();
+        validator = new Validator();
         validator.setContin(true);
         this.type = validator.validateTextFieldInputString(this.accountType.getText());
         this.description = validator.validateTextFieldInputString(this.accountDescription.getText());

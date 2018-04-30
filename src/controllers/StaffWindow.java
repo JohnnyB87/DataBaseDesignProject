@@ -46,18 +46,20 @@ public class StaffWindow {
             this.con = Main.getCon();
             this.tableName = "staff";
             this.validator = new Validator();
-            ObservableList<String> bNoList = validator.createObservableList(this.con,"branch");
-            this.bNoComboBox.getItems().addAll(bNoList);
-            ObservableList<String> options =
-                    FXCollections.observableArrayList(
-                            "Manager",
-                            "Clerk",
-                            "Supervisor"
-                    );
-            this.posComboBox.getItems().addAll(options);
-            this.confirmButton.setOnAction(e -> confirmButtonPressed());
-            this.bNoComboBox.setOnAction(e->this.bNo = checkComboBox(this.bNoComboBox));
-            this.posComboBox.setOnAction(e->this.position = checkComboBox(this.posComboBox));
+            if(this.titleLabel.getText().contains("Add")) {
+                ObservableList<String> bNoList = validator.createObservableList(this.con, "branch");
+                this.bNoComboBox.getItems().addAll(bNoList);
+                ObservableList<String> options =
+                        FXCollections.observableArrayList(
+                                "Manager",
+                                "Clerk",
+                                "Supervisor"
+                        );
+                this.posComboBox.getItems().addAll(options);
+                this.confirmButton.setOnAction(e -> confirmButtonPressed());
+                this.bNoComboBox.setOnAction(e -> this.bNo = checkComboBox(this.bNoComboBox));
+                this.posComboBox.setOnAction(e -> this.position = checkComboBox(this.posComboBox));
+            }
         }
     }
 

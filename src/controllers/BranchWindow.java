@@ -35,19 +35,23 @@ public class BranchWindow {
     private Button confirmButton;
     private String branchNo;
     private String tableName;
+    private Validator validator;
 
     @FXML
     private void initialize(){
         if(this.paneFrame != null) {
             this.confirmButton = paneFrame.getConfirmButton();
             this.tableName = "branch";
-            confirmButton.setOnAction(e -> confirmButtonPressed());
+            this.validator = new Validator();
+            if(this.titleLabel.getText().contains("Add")) {
+                confirmButton.setOnAction(e -> confirmButtonPressed());
+            }
         }
         con = Main.getCon();
     }
 
     private void confirmButtonPressed(){
-        Validator validator = new Validator();
+        validator = new Validator();
         validator.setContin(true);
         this.street = validator.validateTextFieldInputString(this.streetTxtFld.getText());
         this.city = validator.validateTextFieldInputString(this.cityTxtFld.getText());

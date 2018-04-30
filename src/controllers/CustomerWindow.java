@@ -57,12 +57,14 @@ public class CustomerWindow {
             this.tableName = "customer";
             this.con = Main.getCon();
             validator = new Validator();
-            ObservableList<String> bNoList = validator.createObservableList(this.con,"branch");
-            this.bNoComboBox.getItems().addAll(bNoList);
-            this.confirmButton.setOnAction(e -> {
-                confirmButtonPressed();
-            });
-            this.bNoComboBox.setOnAction(e-> checkComboBox());
+            if(this.titleLabel.getText().contains("Add")) {
+                ObservableList<String> bNoList = validator.createObservableList(this.con, "branch");
+                this.bNoComboBox.getItems().addAll(bNoList);
+                this.confirmButton.setOnAction(e -> {
+                    confirmButtonPressed();
+                });
+                this.bNoComboBox.setOnAction(e -> checkComboBox());
+            }
         }
     }
 
