@@ -1,17 +1,14 @@
 package controllers;
 
-import classes.Main;
-import classes.PaneFrame;
+import classes.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class AccountWindow {
 
@@ -26,20 +23,20 @@ public class AccountWindow {
     @FXML
     private TextField accountDescription;
     private Button confirmButton;
+    private String type;
+    private String description;
+    private String accNo;
+    private String tableName;
 
     @FXML
     private void initialize(){
         if(this.paneFrame != null) {
             this.confirmButton = paneFrame.getConfirmButton();
+            this.tableName = "account";
             this.confirmButton.setOnAction(e -> {
-                testButton();
                 testConfirmButton();
             });
         }
-    }
-
-    private void testButton(){
-        System.out.println("ACCOUNT CONFIRM BUTTON");
     }
 
     public Label getTitleLabel() {
@@ -47,20 +44,21 @@ public class AccountWindow {
     }
 
     public void testConfirmButton(){
-        Connection con = Main.getCon();
-        System.out.println("Database connection established");
-        Statement s = null;
-        try {
-            s = con.createStatement();
-
-            ResultSet rs = s.executeQuery ("SELECT * FROM accounts");
-            while (rs.next ())
-            {
-                String accNo = rs.getString ("Ano");
-                System.out.println("Account No is : "+accNo);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        Validator validator = new Validator();
+        validator.setContin(true);
+        this.type = validator.validateTextFieldInputString(this.accountType.getText());
+        this.description = validator.validateTextFieldInputString(this.accountDescription.getText());
+        if(!validator.isContin()){}
+        else {
+            Connection con = Main.getCon();
+            this.accNo = validator.getNumber(con, this.tableName);
+            System.out.println("Database connection established1");
+            SQLQuery sqlQuery = new SQLQuery();
+            sqlQuery.insertQuery(con, this.tableName,this.accNo,this.type,this.description);
         }
+        Stage s = (Stage)paneFrame.getScene().getWindow();
+        s.close();
     }
+
+
 }
