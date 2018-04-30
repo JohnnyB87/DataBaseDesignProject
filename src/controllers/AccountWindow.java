@@ -1,11 +1,17 @@
 package controllers;
 
+import classes.Main;
 import classes.PaneFrame;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AccountWindow {
 
@@ -25,7 +31,10 @@ public class AccountWindow {
     private void initialize(){
         if(this.paneFrame != null) {
             this.confirmButton = paneFrame.getConfirmButton();
-            this.confirmButton.setOnAction(e -> testButton());
+            this.confirmButton.setOnAction(e -> {
+                testButton();
+                testConfirmButton();
+            });
         }
     }
 
@@ -35,5 +44,23 @@ public class AccountWindow {
 
     public Label getTitleLabel() {
         return titleLabel;
+    }
+
+    public void testConfirmButton(){
+        Connection con = Main.getCon();
+        System.out.println("Database connection established");
+        Statement s = null;
+        try {
+            s = con.createStatement();
+
+            ResultSet rs = s.executeQuery ("SELECT * FROM accounts");
+            while (rs.next ())
+            {
+                String accNo = rs.getString ("Ano");
+                System.out.println("Account No is : "+accNo);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
