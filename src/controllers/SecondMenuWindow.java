@@ -14,9 +14,56 @@ import java.io.IOException;
 public class SecondMenuWindow {
 
     @FXML
+    private Button newBranch;
+    @FXML
+    private Button newStaff;
+    @FXML
+    private Button newCustomer;
+    @FXML
+    private Button newAccount;
+    @FXML
     private Label titleLabel;
     private Pane pane;
     private String menuName;
+    private String buttonPressed;
+    private int width = 350;
+    private int height = 300;
+
+    @FXML
+    private void initialize(){
+        this.newAccount.setOnAction(e->{
+            this.buttonPressed="Account";
+            try {
+                buttonPressed();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+        this.newBranch.setOnAction(e->{
+            this.buttonPressed="Branch";
+            try {
+                buttonPressed();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+        this.newCustomer.setOnAction(e->{
+            this.buttonPressed="Customer";
+            try {
+                buttonPressed();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+        this.newStaff.setOnAction(e->{
+            this.buttonPressed="Staff";
+            try {
+                buttonPressed();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        });
+    }
 
     public String getMenuName() {
         return menuName;
@@ -26,63 +73,50 @@ public class SecondMenuWindow {
         this.menuName = menuName;
     }
 
+    public void setButtonPressed(String buttonPressed) {
+        this.buttonPressed = buttonPressed;
+    }
+
     public Label getTitleLabel() {
         return this.titleLabel;
     }
 
-    public void accountButtonPressed() throws IOException {
-        String s = this.menuName;
-        if(!this.menuName.equalsIgnoreCase("add"))
-            s = "viewDeleteUpdate";
-        String str = String.format("../resources/%s/AccountWindow.fxml",s);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(str));
-        this.pane = loader.load();
-        AccountWindow cController = loader.getController();
-        cController.getTitleLabel().setText(String.format("%s Account record",this.menuName));
-        createNewStage(String.format("%s Account record",this.menuName));
+    public void buttonPressed() throws IOException {
+        try {
+            String s = this.menuName;
+            if (!this.menuName.equalsIgnoreCase("add")) {
+                s = "viewDeleteUpdate";
+                this.width = 500;
+                this.height = 400;
+            }
+            String str = String.format("../resources/%s/%sWindow.fxml",s ,this.buttonPressed);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(str));
+            this.pane = loader.load();
+            if (this.buttonPressed.equalsIgnoreCase("account")) {
+                AccountWindow aController = loader.getController();
+                aController.getTitleLabel().setText(String.format("%s Account record", this.menuName));
+            } else if (this.buttonPressed.equalsIgnoreCase("branch")) {
+                BranchWindow bController = loader.getController();
+                bController.getTitleLabel().setText(String.format("%s Branch record", this.menuName));
+
+            } else if (this.buttonPressed.equalsIgnoreCase("customer")) {
+                CustomerWindow cController = loader.getController();
+                cController.getTitleLabel().setText(String.format("%s Customer record", this.menuName));
+            } else {
+                StaffWindow sController = loader.getController();
+                sController.getTitleLabel().setText(String.format("%s Staff record", this.menuName));
+            }
+            createNewStage(String.format("%s %s record", this.menuName, this.buttonPressed), width, height);
+        }catch(IOException ioe){
+            System.out.println("Window not loading");
+        }
     }
 
-    public void customerButtonPressed() throws IOException {
-        String s = this.menuName;
-        if(!this.menuName.equalsIgnoreCase("add"))
-            s = "viewDeleteUpdate";
-        String str = String.format("../resources/%s/CustomerWindow.fxml",s);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(str));
-        this.pane = loader.load();
-        CustomerWindow cController = loader.getController();
-        cController.getTitleLabel().setText(String.format("%s Customer record",this.menuName));
-        createNewStage(String.format("%s Customer record",this.menuName));
-    }
-
-    public void staffButtonPressed() throws IOException {
-        String s = this.menuName;
-        if(!this.menuName.equalsIgnoreCase("add"))
-            s = "viewDeleteUpdate";
-        String str = String.format("../resources/%s/StaffWindow.fxml",s);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(str));
-        this.pane = loader.load();
-        StaffWindow sController = loader.getController();
-        sController.getTitleLabel().setText(String.format("%s Staff record",this.menuName));
-        createNewStage(String.format("%s Staff record",this.menuName));
-    }
-
-    public void branchButtonPressed() throws IOException {
-        String s = this.menuName;
-        if(!this.menuName.equalsIgnoreCase("add"))
-            s = "viewDeleteUpdate";
-        String str = String.format("../resources/%s/BranchWindow.fxml",s);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(str));
-        this.pane = loader.load();
-        BranchWindow bController = loader.getController();
-        bController.getTitleLabel().setText(String.format("%s Branch record",this.menuName));
-        createNewStage(String.format("%s Branch record",this.menuName));
-    }
-
-    private void createNewStage(String title){
+    private void createNewStage(String title, int width, int height){
         StackPane sp = new StackPane();
         sp.getChildren().add(this.pane);
 
-        Scene scene = new Scene(sp,350,300);
+        Scene scene = new Scene(sp,width,height);
         Stage stage = new Stage();
 
         stage.initModality(Modality.WINDOW_MODAL);

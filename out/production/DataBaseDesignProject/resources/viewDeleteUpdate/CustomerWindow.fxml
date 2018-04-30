@@ -21,6 +21,13 @@
             <BorderPane.margin>
                 <Insets left="25.0" right="25.0"/>
             </BorderPane.margin>
+            <columns>
+                <TableColumn fx:id="cNoCol" text="cNo" minWidth="50"/>
+                <TableColumn fx:id="bNoCol" text="bNo" minWidth="50"/>
+                <TableColumn fx:id="nameCol" text="Name" minWidth="75"/>
+                <TableColumn fx:id="addressCol" text="Address" minWidth="75"/>
+                <TableColumn fx:id="contactNoCol" text="Contact No" minWidth="75"/>
+            </columns>
         </TableView>
     </center>
 </PaneFrame>

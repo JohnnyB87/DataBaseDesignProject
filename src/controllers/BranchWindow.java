@@ -1,16 +1,16 @@
 package controllers;
 
-import classes.Main;
-import classes.PaneFrame;
-import classes.SQLQuery;
-import classes.Validator;
+import classes.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class BranchWindow {
@@ -27,49 +27,91 @@ public class BranchWindow {
     private TextField cityTxtFld;
     @FXML
     private TextField contactTxtFld;
-    private String street;
-    private String city;
-    private String county;
-    private int contactNo;
+    @FXML
+    private TableView<Branch> tableView;
+    @FXML
+    private TableColumn<Branch, String> bNoCol;
+    @FXML
+    private TableColumn<Branch, String> streetCol;
+    @FXML
+    private TableColumn<Branch, String> cityCol;
+    @FXML
+    private TableColumn<Branch, String> countyCol;
+    @FXML
+    private TableColumn<Branch, String> contactNoCol;
+
     private Connection con;
-    private Button confirmButton;
-    private String branchNo;
     private String tableName;
     private Validator validator;
+    private Branch branch;
 
     @FXML
     private void initialize(){
         if(this.paneFrame != null) {
-            this.confirmButton = paneFrame.getConfirmButton();
+            this.con = Main.getCon();
+            Button confirmButton = paneFrame.getConfirmButton();
             this.tableName = "branch";
             this.validator = new Validator();
+            branch = new Branch();
             if(this.titleLabel.getText().contains("Add")) {
                 confirmButton.setOnAction(e -> confirmButtonPressed());
+            }
+            else{
+                setColumns();
+                fillTable();
             }
         }
         con = Main.getCon();
     }
 
     private void confirmButtonPressed(){
-        validator = new Validator();
-        validator.setContin(true);
-        this.street = validator.validateTextFieldInputString(this.streetTxtFld.getText());
-        this.city = validator.validateTextFieldInputString(this.cityTxtFld.getText());
-        this.county = validator.validateTextFieldInputString(this.countyTxtFld.getText());
-        this.contactNo = validator.validateTextFieldInputInt(this.contactTxtFld.getText());
+        this.validator = new Validator();
+        this.validator.setContin(true);
+        this.branch.setStreet(validator.validateTextFieldInputString(this.streetTxtFld.getText()));
+        this.branch.setCity(validator.validateTextFieldInputString(this.cityTxtFld.getText()));
+        this.branch.setCounty(validator.validateTextFieldInputString(this.countyTxtFld.getText()));
+        this.branch.setContactNo(validator.validateTextFieldInputInt(this.contactTxtFld.getText()));
 
         if(!validator.isContin())
             System.out.println("Enter correct input");
         else{
-            Connection con = Main.getCon();
-            this.branchNo = validator.getNumber(con, this.tableName);
+            this.branch.setBNo(validator.getNumber(con, this.tableName));
             System.out.println("Database connection established1");
             SQLQuery sqlQuery = new SQLQuery();
             sqlQuery.insertQuery(con, this.tableName,
-                    this.branchNo, this.street, this.city, this.county, Integer.toString(this.contactNo));
+                    branch.getBNo(), branch.getStreet(), branch.getCity(),
+                    branch.getCounty(), Integer.toString(branch.getContactNo()));
         }
         Stage s = (Stage)paneFrame.getScene().getWindow();
         s.close();
+    }
+
+    private void setColumns() {
+        this.bNoCol.setCellValueFactory(new PropertyValueFactory<>("BNo"));
+        this.streetCol.setCellValueFactory(new PropertyValueFactory<>("Street"));
+        this.cityCol.setCellValueFactory(new PropertyValueFactory<>("City"));
+        this.countyCol.setCellValueFactory(new PropertyValueFactory<>("County"));
+        this.contactNoCol.setCellValueFactory(new PropertyValueFactory<>("ContactNo"));
+    }
+
+    private void fillTable(){
+        ObservableList<Branch> ol = FXCollections.observableArrayList();
+        Statement s = null;
+        try {
+            s = con.createStatement();
+            //Simple Query
+            ResultSet rs = s.executeQuery ("SELECT * FROM branch");
+            while (rs.next ())
+            {
+                int index = 1;
+                Branch b = new Branch(rs.getString (index++),rs.getString(index++),
+                        rs.getString(index++), rs.getString(index++), rs.getInt(index));
+                ol.add(b);
+            }
+            this.tableView.setItems(ol);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public Label getTitleLabel() {
