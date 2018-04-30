@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import classes.PaneFrame?>
+
+<PaneFrame xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controllers.AccountWindow"
+           prefHeight="400.0" prefWidth="600.0"
+           style="-fx-background-color: #bcbcbc;"
+           fx:id="paneFrame">
+    <top>
+        <VBox alignment="CENTER" prefHeight="78.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="titleLabel" text="Add Account" style="-fx-font-size: 30;"/>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <Pane prefHeight="222.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="accountType" layoutX="194.0"/>
+                <TextField fx:id="accountDescription" layoutX="194.0" layoutY="30.0" />
+                <Label layoutX="103.0" layoutY="4.0" text="Type: " />
+                <Label layoutX="103.0" layoutY="34.0" text="Description: " />
+            </children>
+        </Pane>
+    </center>
+</PaneFrame>

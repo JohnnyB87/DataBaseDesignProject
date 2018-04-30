@@ -1,0 +1,36 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.SecondMenuWindow"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: #bcbcbc;">
+    <children>
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
+            <children>
+                <Label fx:id="titleLabel" alignment="CENTER" style="-fx-font-size: 30;">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets  bottom="-100"/>
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="1.0" layoutY="75.0" prefHeight="300.0" prefWidth="400.0">
+            <children>
+                <TilePane alignment="CENTER" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+                    <children>
+                        <Button fx:id="newBranch" text="Branch" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#branchButtonPressed"/>
+                        <Button fx:id="newStaff" text="Staff" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#staffButtonPressed"/>
+                        <Button fx:id="newCustomer" text="Customer" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#customerButtonPressed"/>
+                        <Button fx:id="newAccount" text="Account" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#accountButtonPressed"/>
+                    </children>
+                </TilePane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
