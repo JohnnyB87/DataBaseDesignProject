@@ -10,26 +10,26 @@ import java.sql.Statement;
 
 public class Validator {
 
-    private boolean contin;
+    private boolean cont;
 
-    public boolean isContin() {
-        return contin;
+    public boolean isCont() {
+        return cont;
     }
 
-    public void setContin(boolean contin) {
-        this.contin = contin;
+    public void setCont(boolean cont) {
+        this.cont = cont;
     }
 
     public String validateTextFieldInputString(String s){
         if(s.matches("[a-zA-Z ]+"))
             return s;
-        this.contin = false;
+        this.cont = false;
         return null;
     }
     public int validateTextFieldInputInt(String s){
         if(s.matches("[0-9]+"))
             return Integer.parseInt(s);
-        this.contin = false;
+        this.cont = false;
         return 0;
     }
 

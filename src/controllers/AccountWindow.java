@@ -43,9 +43,7 @@ public class AccountWindow {
             this.validator = new Validator();
             this.account = new Account();
             if(this.titleLabel.getText().contains("Add")) {
-                confirmButton.setOnAction(e -> {
-                    testConfirmButton();
-                });
+                confirmButton.setOnAction(e -> testConfirmButton());
             }else{
                 setColumns();
                 fillTable();
@@ -65,10 +63,10 @@ public class AccountWindow {
 
     public void testConfirmButton(){
         validator = new Validator();
-        validator.setContin(true);
+        validator.setCont(true);
         this.account.setType(validator.validateTextFieldInputString(this.accountType.getText()));
         this.account.setDescription(validator.validateTextFieldInputString(this.accountDescription.getText()));
-        if(!validator.isContin()){
+        if(!validator.isCont()){
             System.out.println("Invalid data entered.");
         }
         else {
@@ -84,7 +82,7 @@ public class AccountWindow {
 
     private void fillTable(){
         ObservableList<Account> ol = FXCollections.observableArrayList();
-        Statement s = null;
+        Statement s;
         try {
             s = con.createStatement();
             //Simple Query

@@ -33,55 +33,32 @@ public class SecondMenuWindow {
     private void initialize(){
         this.newAccount.setOnAction(e->{
             this.buttonPressed="Account";
-            try {
                 buttonPressed();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
         });
         this.newBranch.setOnAction(e->{
             this.buttonPressed="Branch";
-            try {
                 buttonPressed();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
         });
         this.newCustomer.setOnAction(e->{
             this.buttonPressed="Customer";
-            try {
                 buttonPressed();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
         });
         this.newStaff.setOnAction(e->{
             this.buttonPressed="Staff";
-            try {
                 buttonPressed();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
         });
     }
 
-    public String getMenuName() {
-        return menuName;
-    }
 
-    public void setMenuName(String menuName) {
+     void setMenuName(String menuName) {
         this.menuName = menuName;
-    }
-
-    public void setButtonPressed(String buttonPressed) {
-        this.buttonPressed = buttonPressed;
     }
 
     public Label getTitleLabel() {
         return this.titleLabel;
     }
 
-    public void buttonPressed() throws IOException {
+    private void buttonPressed()  {
         try {
             String s = this.menuName;
             if (!this.menuName.equalsIgnoreCase("add")) {

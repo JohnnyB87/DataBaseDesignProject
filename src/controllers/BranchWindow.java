@@ -66,13 +66,13 @@ public class BranchWindow {
 
     private void confirmButtonPressed(){
         this.validator = new Validator();
-        this.validator.setContin(true);
+        this.validator.setCont(true);
         this.branch.setStreet(validator.validateTextFieldInputString(this.streetTxtFld.getText()));
         this.branch.setCity(validator.validateTextFieldInputString(this.cityTxtFld.getText()));
         this.branch.setCounty(validator.validateTextFieldInputString(this.countyTxtFld.getText()));
         this.branch.setContactNo(validator.validateTextFieldInputInt(this.contactTxtFld.getText()));
 
-        if(!validator.isContin())
+        if(!validator.isCont())
             System.out.println("Enter correct input");
         else{
             this.branch.setBNo(validator.getNumber(con, this.tableName));
@@ -96,7 +96,7 @@ public class BranchWindow {
 
     private void fillTable(){
         ObservableList<Branch> ol = FXCollections.observableArrayList();
-        Statement s = null;
+        Statement s;
         try {
             s = con.createStatement();
             //Simple Query

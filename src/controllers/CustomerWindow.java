@@ -1,25 +1,17 @@
 package controllers;
 
 import classes.*;
-import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 public class CustomerWindow {
 
@@ -64,9 +56,7 @@ public class CustomerWindow {
             if(this.titleLabel.getText().contains("Add")) {
                 ObservableList<String> bNoList = validator.createObservableList(this.con, "branch");
                 this.bNoComboBox.getItems().addAll(bNoList);
-                confirmButton.setOnAction(e -> {
-                    confirmButtonPressed();
-                });
+                confirmButton.setOnAction(e -> confirmButtonPressed());
                 this.bNoComboBox.setOnAction(e -> checkComboBox());
             }
             else{
@@ -77,14 +67,12 @@ public class CustomerWindow {
     }
 
     private void confirmButtonPressed(){
-        validator.setContin(true);
+        validator.setCont(true);
         customer.setName(validator.validateTextFieldInputString(this.nameTxtFld.getText()));
         customer.setAddress(validator.validateTextFieldInputString(this.addressTxtFld.getText()));
         customer.setContactNo(validator.validateTextFieldInputInt(this.contactTxtFld.getText()));
 
-//        System.out.println(this.name + "    "+this.address+ "    "+this.contactNo+"    "+this.bNo );
-
-        if(!validator.isContin())
+        if(!validator.isCont())
             System.out.println("Enter correct input");
         else{
             customer.setCNo(validator.getNumber(con, this.tableName));

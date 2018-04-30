@@ -22,7 +22,7 @@ public class Main extends Application{
         return con;
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         runDB();
         launch(args);
 //        con.close();

@@ -74,15 +74,13 @@ public class StaffWindow {
     }
 
     private void confirmButtonPressed(){
-        validator.setContin(true);
+        validator.setCont(true);
         this.staff.setName(validator.validateTextFieldInputString(this.nameTxtFld.getText()));
         this.staff.setContactNo(validator.validateTextFieldInputInt(this.contactTxtFld.getText()));
         if(this.staff.getPosition() == null || this.staff.getBNo() == null)
-            validator.setContin(false);
+            validator.setCont(false);
 
-//        System.out.println(this.name + "    "+this.address+ "    "+this.contactNo+"    "+this.bNo );
-
-        if(!validator.isContin())
+        if(!validator.isCont())
             System.out.println("Enter correct input");
         else{
             Connection con = Main.getCon();
@@ -119,17 +117,18 @@ public class StaffWindow {
 
     private void fillTable(){
         ObservableList<Staff> ol = FXCollections.observableArrayList();
-        Statement s = null;
+        Statement s;
         try {
             s = con.createStatement();
             //Simple Query
             ResultSet rs = s.executeQuery ("SELECT * FROM staff");
             while (rs.next ())
             {
+                int index = 1;
                 Staff a = new Staff(
-                        rs.getString (1),rs.getString(2),
-                        rs.getString(3),rs.getString (4),
-                        rs.getInt (5));
+                        rs.getString (index++),rs.getString(index++),
+                        rs.getString(index++),rs.getString (index++),
+                        rs.getInt (index));
                 ol.add(a);
             }
             this.tableView.setItems(ol);

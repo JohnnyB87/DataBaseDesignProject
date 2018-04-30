@@ -8,14 +8,17 @@ public class SQLQuery {
         System.out.println("Database connection established1");
         String str = "";
         String car = "?,";
-        for (String anArray : array) {
+        int i=0;
+        int size = array.length;
+        while(i<size) {
             str = String.format("%s%s", str, car);
+            i++;
         }
         str = str.substring(0,str.length()-1);
         try {
             String insert = String.format("INSERT INTO %s VALUES (%s)",tableName, str);
             PreparedStatement stmt = con.prepareStatement(insert);
-            int i=1;
+            i=1;
             for(String s : array){
                 try{
                     stmt.setInt(i, Integer.parseInt(s));
