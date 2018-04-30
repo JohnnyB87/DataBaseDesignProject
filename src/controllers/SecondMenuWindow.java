@@ -72,14 +72,16 @@ public class SecondMenuWindow {
             if (this.buttonPressed.equalsIgnoreCase("account")) {
                 AccountWindow aController = loader.getController();
                 aController.getTitleLabel().setText(String.format("%s Account record", this.menuName));
-            } else if (this.buttonPressed.equalsIgnoreCase("branch")) {
+            }
+            else if (this.buttonPressed.equalsIgnoreCase("branch")) {
                 BranchWindow bController = loader.getController();
                 bController.getTitleLabel().setText(String.format("%s Branch record", this.menuName));
-
-            } else if (this.buttonPressed.equalsIgnoreCase("customer")) {
+            }
+            else if (this.buttonPressed.equalsIgnoreCase("customer")) {
                 CustomerWindow cController = loader.getController();
                 cController.getTitleLabel().setText(String.format("%s Customer record", this.menuName));
-            } else {
+            }
+            else {
                 StaffWindow sController = loader.getController();
                 sController.getTitleLabel().setText(String.format("%s Staff record", this.menuName));
             }

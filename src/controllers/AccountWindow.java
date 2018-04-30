@@ -42,11 +42,24 @@ public class AccountWindow {
             con = Main.getCon();
             this.validator = new Validator();
             this.account = new Account();
-            if(this.titleLabel.getText().contains("Add")) {
+            String action = this.titleLabel.getText().split(" ")[0];
+            System.out.println("Action ::::   " + action + "   title::: " + this.titleLabel.getText());
+            if(action.equalsIgnoreCase("Add")) {
                 confirmButton.setOnAction(e -> testConfirmButton());
             }else{
                 setColumns();
                 fillTable();
+                if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.setEditable(true);
+                }
+                else if(action.equalsIgnoreCase("Delete")){
+                    this.tableView.setEditable(true);
+                    confirmButton.setText("Delete");
+                    confirmButton.setOnAction(e-> {
+                        Object selectedItem = tableView.getSelectionModel().getSelectedItem();
+                        tableView.getItems().remove(selectedItem);
+                    });
+                }
             }
         }
     }
@@ -61,7 +74,7 @@ public class AccountWindow {
         return titleLabel;
     }
 
-    public void testConfirmButton(){
+    private void testConfirmButton(){
         validator = new Validator();
         validator.setCont(true);
         this.account.setType(validator.validateTextFieldInputString(this.accountType.getText()));
