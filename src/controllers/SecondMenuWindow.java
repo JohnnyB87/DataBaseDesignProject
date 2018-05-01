@@ -1,5 +1,6 @@
 package controllers;
 
+import classes.PaneFrame;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -23,7 +24,7 @@ public class SecondMenuWindow {
     private Button newAccount;
     @FXML
     private Label titleLabel;
-    private Pane pane;
+    private PaneFrame pane;
     private String menuName;
     private String buttonPressed;
     private int width = 350;
@@ -49,8 +50,7 @@ public class SecondMenuWindow {
         });
     }
 
-
-     void setMenuName(String menuName) {
+    void setMenuName(String menuName) {
         this.menuName = menuName;
     }
 
@@ -85,9 +85,11 @@ public class SecondMenuWindow {
                 StaffWindow sController = loader.getController();
                 sController.getTitleLabel().setText(String.format("%s Staff record", this.menuName));
             }
+            this.pane.setConfirmButtonText(this.menuName);
             createNewStage(String.format("%s %s record", this.menuName, this.buttonPressed), width, height);
         }catch(IOException ioe){
             System.out.println("Window not loading");
+            ioe.printStackTrace();
         }
     }
 

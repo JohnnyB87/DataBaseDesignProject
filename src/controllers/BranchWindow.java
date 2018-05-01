@@ -47,18 +47,32 @@ public class BranchWindow {
 
     @FXML
     private void initialize(){
+        String action = Main.getButtonPressed();
         if(this.paneFrame != null) {
             this.con = Main.getCon();
             Button confirmButton = paneFrame.getConfirmButton();
             this.tableName = "branch";
             this.validator = new Validator();
             branch = new Branch();
-            if(this.titleLabel.getText().contains("Add")) {
+            if(action.equalsIgnoreCase("Add")) {
                 confirmButton.setOnAction(e -> confirmButtonPressed());
             }
             else{
                 setColumns();
                 fillTable();
+                if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.setEditable(true);
+                }
+                else if(action.equalsIgnoreCase("Delete")){
+                    this.tableView.setEditable(true);
+                    confirmButton.setText("Delete");
+                    confirmButton.setOnAction(e-> {
+                        Branch selectedItem = tableView.getSelectionModel().getSelectedItem();
+                        tableView.getItems().remove(selectedItem);
+                        SQLQuery query = new SQLQuery();
+                        query.deleteQuery(con, tableName, selectedItem.getBNo());
+                    });
+                }
             }
         }
         con = Main.getCon();
@@ -78,9 +92,7 @@ public class BranchWindow {
             this.branch.setBNo(validator.getNumber(con, this.tableName));
             System.out.println("Database connection established1");
             SQLQuery sqlQuery = new SQLQuery();
-            sqlQuery.insertQuery(con, this.tableName,
-                    branch.getBNo(), branch.getStreet(), branch.getCity(),
-                    branch.getCounty(), Integer.toString(branch.getContactNo()));
+            sqlQuery.insertQuery(con, this.tableName, branch.getBNo());
         }
         Stage s = (Stage)paneFrame.getScene().getWindow();
         s.close();

@@ -13,6 +13,7 @@ public class Main extends Application{
 
     private static Stage primaryStage = new Stage();
     private static Connection con;
+    private static String buttonPressed;
 
     public static Stage getPrimaryStage() {
         return primaryStage;
@@ -20,6 +21,14 @@ public class Main extends Application{
 
     public static Connection getCon() {
         return con;
+    }
+
+    public static void setButtonPressed(String text){
+        buttonPressed = text;
+    }
+
+    public static String getButtonPressed(){
+        return buttonPressed;
     }
 
     public static void main(String[] args) {

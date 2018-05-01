@@ -52,6 +52,7 @@ public class StaffWindow {
             this.tableName = "staff";
             this.validator = new Validator();
             this.staff = new Staff();
+            String action = Main.getButtonPressed();
             if(this.titleLabel.getText().contains("Add")) {
                 ObservableList<String> bNoList = validator.createObservableList(this.con, "branch");
                 this.bNoComboBox.getItems().addAll(bNoList);
@@ -69,6 +70,19 @@ public class StaffWindow {
             else{
                 setColumns();
                 fillTable();
+                if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.setEditable(true);
+                }
+                else if(action.equalsIgnoreCase("Delete")){
+                    this.tableView.setEditable(true);
+                    confirmButton.setText("Delete");
+                    confirmButton.setOnAction(e-> {
+                        Staff selectedItem = tableView.getSelectionModel().getSelectedItem();
+                        tableView.getItems().remove(selectedItem);
+                        SQLQuery query = new SQLQuery();
+                        query.deleteQuery(con, tableName, selectedItem.getSNo());
+                    });
+                }
             }
         }
     }

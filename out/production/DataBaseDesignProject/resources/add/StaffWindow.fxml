@@ -10,23 +10,19 @@
            fx:id="paneFrame">
     <top>
         <VBox alignment="CENTER" prefHeight="78.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <Label fx:id="titleLabel" text="Add Staff" style="-fx-font-size: 30;"/>
-            </children>
+            <Label fx:id="titleLabel" text="Add Staff" style="-fx-font-size: 30;"/>
         </VBox>
     </top>
     <center>
         <Pane prefHeight="222.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <TextField fx:id="nameTxtFld" layoutX="194.0"/>
-                <TextField fx:id="contactTxtFld" layoutX="194.0" layoutY="30.0" />
-                <ComboBox fx:id="posComboBox" layoutX="194.0" layoutY="60.0"/>
-                <ComboBox fx:id="bNoComboBox" layoutX="194.0" layoutY="90.0"/>
-                <Label layoutX="103.0" layoutY="4.0" text="Name: " />
-                <Label layoutX="103.0" layoutY="34.0" text="Contact No.: " />
-                <Label layoutX="103.0" layoutY="64.0" text="Position: " />
-                <Label layoutX="103.0" layoutY="94.0" text="Branch No.: " />
-            </children>
+            <TextField fx:id="nameTxtFld" layoutX="194.0"/>
+            <TextField fx:id="contactTxtFld" layoutX="194.0" layoutY="30.0"/>
+            <ComboBox fx:id="posComboBox" layoutX="194.0" layoutY="60.0"/>
+            <ComboBox fx:id="bNoComboBox" layoutX="194.0" layoutY="90.0"/>
+            <Label layoutX="103.0" layoutY="4.0" text="Name: "/>
+            <Label layoutX="103.0" layoutY="34.0" text="Contact No.: "/>
+            <Label layoutX="103.0" layoutY="64.0" text="Position: "/>
+            <Label layoutX="103.0" layoutY="94.0" text="Branch No.: "/>
         </Pane>
     </center>
 

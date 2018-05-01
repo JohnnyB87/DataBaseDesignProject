@@ -2,7 +2,6 @@ package controllers;
 
 import classes.Main;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,14 +19,15 @@ public class MainWindow{
 
     public void buttonPressed(ActionEvent e) throws IOException {
         Button b = (Button)e.getSource();
-        String str = b.getText();
+        String buttonPressed = b.getText();
+        Main.setButtonPressed(buttonPressed);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/SecondMenuWindow.fxml"));
         this.pane = loader.load();
         SecondMenuWindow addMenu = loader.getController();
-        addMenu.getTitleLabel().setText(str + " Menu");
-        addMenu.setMenuName(str);
-        createNewStage(str);
+        addMenu.getTitleLabel().setText(buttonPressed + " Menu");
+        addMenu.setMenuName(buttonPressed);
+        createNewStage(buttonPressed);
     }
 
     private void createNewStage(String title){
@@ -47,6 +47,5 @@ public class MainWindow{
     public static Stage getStage(){
         return stage;
     }
-
 
 }

@@ -53,6 +53,7 @@ public class CustomerWindow {
             this.con = Main.getCon();
             validator = new Validator();
             customer = new Customer();
+            String action = Main.getButtonPressed();
             if(this.titleLabel.getText().contains("Add")) {
                 ObservableList<String> bNoList = validator.createObservableList(this.con, "branch");
                 this.bNoComboBox.getItems().addAll(bNoList);
@@ -62,6 +63,26 @@ public class CustomerWindow {
             else{
                 setColumns();
                 fillTable();
+                if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.setEditable(true);
+                    confirmButton.setOnAction(e-> {
+                        Customer selectedItem = tableView.getSelectionModel().getSelectedItem();
+                        tableView.getItems().remove(selectedItem);
+                        SQLQuery query = new SQLQuery();
+                        query.updateQuery(con,tableName,selectedItem.getCNo(),selectedItem.getBNo(),
+                                selectedItem.getName(),selectedItem.getAddress(),
+                                Integer.toString(selectedItem.getContactNo()));
+                    });
+                }
+                else if(action.equalsIgnoreCase("Delete")){
+                    this.tableView.setEditable(true);
+                    confirmButton.setOnAction(e-> {
+                        Customer selectedItem = tableView.getSelectionModel().getSelectedItem();
+                        tableView.getItems().remove(selectedItem);
+                        SQLQuery query = new SQLQuery();
+                        query.deleteQuery(con, tableName, selectedItem.getCNo());
+                    });
+                }
             }
         }
     }
@@ -101,7 +122,7 @@ public class CustomerWindow {
         try {
             s = con.createStatement();
             //Simple Query
-            ResultSet rs = s.executeQuery ("SELECT * FROM staff");
+            ResultSet rs = s.executeQuery ("SELECT * FROM customer");
             while (rs.next ())
             {
                 int index = 1;

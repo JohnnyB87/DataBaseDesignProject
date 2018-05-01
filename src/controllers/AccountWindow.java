@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 
-public class AccountWindow {
+public class AccountWindow{
 
     @FXML
     private PaneFrame paneFrame;
@@ -39,11 +39,10 @@ public class AccountWindow {
         if(this.paneFrame != null) {
             Button confirmButton = paneFrame.getConfirmButton();
             this.tableName = "account";
-            con = Main.getCon();
+            this.con = Main.getCon();
             this.validator = new Validator();
             this.account = new Account();
-            String action = this.titleLabel.getText().split(" ")[0];
-            System.out.println("Action ::::   " + action + "   title::: " + this.titleLabel.getText());
+            String action = Main.getButtonPressed();
             if(action.equalsIgnoreCase("Add")) {
                 confirmButton.setOnAction(e -> testConfirmButton());
             }else{
@@ -56,8 +55,10 @@ public class AccountWindow {
                     this.tableView.setEditable(true);
                     confirmButton.setText("Delete");
                     confirmButton.setOnAction(e-> {
-                        Object selectedItem = tableView.getSelectionModel().getSelectedItem();
+                        Account selectedItem = tableView.getSelectionModel().getSelectedItem();
                         tableView.getItems().remove(selectedItem);
+                        SQLQuery query = new SQLQuery();
+                        query.deleteQuery(con, tableName, selectedItem.getAccNo());
                     });
                 }
             }
@@ -74,6 +75,10 @@ public class AccountWindow {
         return titleLabel;
     }
 
+    public void setTitleLabel(Label titleLabel) {
+        this.titleLabel = titleLabel;
+    }
+
     private void testConfirmButton(){
         validator = new Validator();
         validator.setCont(true);
@@ -86,7 +91,7 @@ public class AccountWindow {
             this.account.setAccNo(validator.getNumber(con, this.tableName));
             System.out.println("Database connection established1");
             SQLQuery sqlQuery = new SQLQuery();
-            sqlQuery.insertQuery(con, this.tableName,this.account.getAccNo(),
+            sqlQuery.insertQuery(con, this.tableName, this.account.getAccNo(),
                     this.account.getType(),this.account.getDescription());
         }
         Stage s = (Stage)paneFrame.getScene().getWindow();
