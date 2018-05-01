@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c56728-0d26-4af7-86b9-d067d62338be" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/classes/EditCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/AccountWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/AccountWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/SecondMenuWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/SecondMenuWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/AccountWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/AccountWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/BranchWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/BranchWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/CustomerWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/CustomerWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/StaffWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/add/StaffWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/viewDeleteUpdate/BranchWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/viewDeleteUpdate/BranchWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/viewDeleteUpdate/StaffWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/resources/viewDeleteUpdate/StaffWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/PaneFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/PaneFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/SQLQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SQLQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AccountWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AccountWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/BranchWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BranchWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/PaneFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/PaneFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/BranchWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/BranchWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/CustomerWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/CustomerWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/StaffWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/StaffWindow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/CustomerWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CustomerWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecondMenuWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/StaffWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/StaffWindow.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,8 +92,25 @@
       <file leaf-file-name="CustomerWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/CustomerWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="73" column="76" selection-start-line="73" selection-start-column="76" selection-end-line="73" selection-end-column="76" />
+            <state relative-caret-position="155">
+              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/EditCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-882">
+              <caret line="122" column="11" lean-forward="true" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#6686#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#3480#3481#0" expanded="true" />
+                <element signature="e#3536#3537#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,8 +148,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -201,6 +209,7 @@
         <option value="$PROJECT_DIR$/src/controllers/AccountWindow.java" />
         <option value="$PROJECT_DIR$/src/controllers/BranchWindow.java" />
         <option value="$PROJECT_DIR$/src/classes/SQLQuery.java" />
+        <option value="$PROJECT_DIR$/src/classes/EditCell.java" />
         <option value="$PROJECT_DIR$/src/controllers/CustomerWindow.java" />
       </list>
     </option>
@@ -408,7 +417,7 @@
       <workItem from="1524968249676" duration="981000" />
       <workItem from="1524997179201" duration="3081000" />
       <workItem from="1525023420103" duration="6849000" />
-      <workItem from="1525113416294" duration="20936000" />
+      <workItem from="1525113416294" duration="23799000" />
     </task>
     <task id="LOCAL-00001" summary="Started">
       <created>1524937720769</created>
@@ -487,11 +496,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525122280986</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="simple delete statements done, can't delete referenced keys">
+      <created>1525174789669</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1525174789669</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88688000" />
+    <option name="totallyTimeSpent" value="91551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -507,12 +523,12 @@
       <window_info anchor="right" id="Maven Projects" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="18" weight="0.32763532" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.37179488" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.37179488" />
       <window_info anchor="bottom" id="Terminal" order="17" />
       <window_info id="Capture Tool" order="10" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.37321937" />
       <window_info id="Designer" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.2033557" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.2033557" />
       <window_info anchor="right" id="Database" order="12" visible="true" weight="0.17718121" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
@@ -546,7 +562,8 @@
     <MESSAGE value="added if statements to initialize" />
     <MESSAGE value="created Account class&#10;created Branch class&#10;created Customer class&#10;created Staff class&#10;All tables can be viewed" />
     <MESSAGE value="tidied code" />
-    <option name="LAST_COMMIT_MESSAGE" value="tidied code" />
+    <MESSAGE value="simple delete statements done, can't delete referenced keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple delete statements done, can't delete referenced keys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -554,20 +571,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controllers/SecondMenuWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/BranchWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/CustomerWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -949,10 +952,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/util/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/EditCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-882">
+          <caret line="122" column="11" lean-forward="true" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#6686#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
+            <element signature="e#3536#3537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/CustomerWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="73" column="76" selection-start-line="73" selection-start-column="76" selection-end-line="73" selection-end-column="76" />
+        <state relative-caret-position="155">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
         </state>
       </provider>
     </entry>

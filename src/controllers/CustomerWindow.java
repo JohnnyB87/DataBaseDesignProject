@@ -64,7 +64,15 @@ public class CustomerWindow {
                 setColumns();
                 fillTable();
                 if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
+                    tableView.setOnKeyPressed(event -> {
+                        TablePosition<Customer, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+                        if (pos != null && event.getCode().isLetterKey()) {
+                            tableView.edit(pos.getRow(), pos.getTableColumn());
+                            System.out.println("--------------"+pos.getRow()+ "   "+ pos.getTableColumn());
+                        }
+                    });
                     confirmButton.setOnAction(e-> {
                         Customer selectedItem = tableView.getSelectionModel().getSelectedItem();
                         tableView.getItems().remove(selectedItem);
@@ -72,6 +80,7 @@ public class CustomerWindow {
                         query.updateQuery(con,tableName,selectedItem.getCNo(),selectedItem.getBNo(),
                                 selectedItem.getName(),selectedItem.getAddress(),
                                 Integer.toString(selectedItem.getContactNo()));
+                        System.out.println(tableView);
                     });
                 }
                 else if(action.equalsIgnoreCase("Delete")){
