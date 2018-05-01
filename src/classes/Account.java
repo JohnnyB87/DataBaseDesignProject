@@ -50,4 +50,12 @@ public class Account {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public void editDetails(int n, String newValue){
+        String[] array = {accNo, type, description};
+        array[n] = newValue;
+        this.accNo = array[0];
+        this.type = array[1];
+        this.description = array[2];
+    }
 }

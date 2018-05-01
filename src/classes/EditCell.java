@@ -182,6 +182,28 @@ public class EditCell < S, T > extends TextFieldTableCell< S, T > {
         // TextField
         textField.requestFocus();
     }
+
+    private static final StringConverter<String> IDENTITY_CONVERTER = new StringConverter<String>() {
+
+
+        @Override
+        public String toString(String object) {
+            return object;
+        }
+
+        @Override
+        public String fromString(String string) {
+            return string;
+        }
+    };
+
+    /**
+     * Convenience method for creating an EditCell for a String value.
+     * @return
+     */
+    public static <S> EditCell<S, String> createStringEditCell() {
+        return new EditCell<S, String>(IDENTITY_CONVERTER);
+    }
 }
 
 /*

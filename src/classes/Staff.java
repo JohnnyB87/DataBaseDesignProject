@@ -9,7 +9,7 @@ public class Staff {
     private String bNo;
     private String name;
     private String position;
-    private int contactNo;
+    private String contactNo;
 
     //-------------------------
     //      CONSTRUCTORS
@@ -17,7 +17,7 @@ public class Staff {
     public Staff() {
     }
 
-    public Staff(String sNo, String bNo, String name, String position, int contactNo) {
+    public Staff(String sNo, String bNo, String name, String position, String contactNo) {
         this.sNo = sNo;
         this.bNo = bNo;
         this.name = name;
@@ -44,7 +44,7 @@ public class Staff {
         return position;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
@@ -67,7 +67,17 @@ public class Staff {
         this.position = position;
     }
 
-    public void setContactNo(int contactNo) {
+    public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
+    }
+
+    public void editDetails(int n, String newValue){
+        String[] array = {sNo, bNo, name, position, contactNo};
+        array[n] = newValue;
+        this.sNo = array[0];
+        this.bNo = array[1];
+        this.name = array[2];
+        this.position = array[3];
+        this.contactNo = array[4];
     }
 }

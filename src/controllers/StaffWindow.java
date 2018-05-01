@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static javafx.scene.input.KeyCode.ENTER;
+
 public class StaffWindow {
 
     @FXML
@@ -71,7 +73,28 @@ public class StaffWindow {
                 setColumns();
                 fillTable();
                 if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
+                    setColumnsEditable();
+                    //---------------------------------
+                    tableView.setOnKeyPressed(event -> {
+                        TablePosition<Staff, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+                        if (pos != null && event.getCode() == ENTER) {
+                            int row = pos.getRow();
+                            TableColumn<Staff, ?> col = pos.getTableColumn();
+                            tableView.edit(row, col);
+                            col.setOnEditCommit(t ->
+                            {(
+                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                                    .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                                Staff rowData = t.getRowValue();
+                                String newValue = (String)t.getNewValue();
+                                SQLQuery query = new SQLQuery();
+                                query.updateQuery(con,tableName,col.getText(),newValue,rowData.getSNo());
+                            });
+                        }
+                    });
+                    //-------------------------
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -103,7 +126,7 @@ public class StaffWindow {
             SQLQuery sqlQuery = new SQLQuery();
             sqlQuery.insertQuery(con, this.tableName,
                     this.staff.getSNo(), this.staff.getBNo(), this.staff.getName(),
-                    this.staff.getPosition(), Integer.toString(this.staff.getContactNo())
+                    this.staff.getPosition(), this.staff.getContactNo()
             );
         }
         Stage s = (Stage)paneFrame.getScene().getWindow();
@@ -129,6 +152,13 @@ public class StaffWindow {
         this.contactNoCol.setCellValueFactory(new PropertyValueFactory<>("ContactNo"));
     }
 
+    private void setColumnsEditable(){
+        bNoCol.setCellFactory(column -> EditCell.createStringEditCell());
+        nameCol.setCellFactory(column -> EditCell.createStringEditCell());
+        posCol.setCellFactory(column -> EditCell.createStringEditCell());
+        contactNoCol.setCellFactory(column -> EditCell.createStringEditCell());
+    }
+
     private void fillTable(){
         ObservableList<Staff> ol = FXCollections.observableArrayList();
         Statement s;
@@ -140,9 +170,9 @@ public class StaffWindow {
             {
                 int index = 1;
                 Staff a = new Staff(
-                        rs.getString (index++),rs.getString(index++),
-                        rs.getString(index++),rs.getString (index++),
-                        rs.getInt (index));
+                        rs.getString(index++), rs.getString(index++),
+                        rs.getString(index++), rs.getString(index++),
+                        rs.getString(index));
                 ol.add(a);
             }
             this.tableView.setItems(ol);

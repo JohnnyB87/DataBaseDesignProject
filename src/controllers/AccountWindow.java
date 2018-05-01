@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 
+import static javafx.scene.input.KeyCode.ENTER;
+
 public class AccountWindow{
 
     @FXML
@@ -49,7 +51,27 @@ public class AccountWindow{
                 setColumns();
                 fillTable();
                 if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
+                    setColumnsEditable();
+                    //---------------------------------
+                    tableView.setOnKeyPressed(event -> {
+                        TablePosition<Account, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+                        if (pos != null && event.getCode() == ENTER) {
+                            int row = pos.getRow();
+                            TableColumn<Account, ?> col = pos.getTableColumn();
+                            tableView.edit(row, col);
+                            col.setOnEditCommit(t ->
+                            {(
+                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                                    .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                                Account rowData = t.getRowValue();
+                                String newValue = (String)t.getNewValue();
+                                SQLQuery query = new SQLQuery();
+                                query.updateQuery(con,tableName,col.getText(),newValue,rowData.getAccNo());
+                            });
+                        }
+                    });
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -69,6 +91,11 @@ public class AccountWindow{
         this.accNoCol.setCellValueFactory(new PropertyValueFactory<>("AccNo"));
         this.accTypeCol.setCellValueFactory(new PropertyValueFactory<>("Type"));
         this.accDesCol.setCellValueFactory(new PropertyValueFactory<>("Description"));
+    }
+
+    private void setColumnsEditable(){
+        accTypeCol.setCellFactory(column -> EditCell.createStringEditCell());
+        accDesCol.setCellFactory(column -> EditCell.createStringEditCell());
     }
 
     public Label getTitleLabel() {

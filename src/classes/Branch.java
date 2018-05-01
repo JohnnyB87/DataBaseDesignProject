@@ -9,7 +9,7 @@ public class Branch {
     private String street;
     private String city;
     private String county;
-    private int contactNo;
+    private String contactNo;
 
     //-------------------------
     //      CONSTRUCTORS
@@ -17,7 +17,7 @@ public class Branch {
     public Branch() {
     }
 
-    public Branch(String bNo, String street, String city, String county, int contactNo) {
+    public Branch(String bNo, String street, String city, String county, String contactNo) {
         this.bNo = bNo;
         this.street = street;
         this.city = city;
@@ -45,7 +45,7 @@ public class Branch {
         return county;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
@@ -69,7 +69,17 @@ public class Branch {
         this.county = county;
     }
 
-    public void setContactNo(int contactNo) {
+    public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
+    }
+
+    public void editDetails(int n, String newValue){
+        String[] array = {bNo, street, city, county, contactNo};
+        array[n] = newValue;
+        this.bNo = array[0];
+        this.street = array[1];
+        this.city = array[2];
+        this.county = array[3];
+        this.contactNo = array[4];
     }
 }

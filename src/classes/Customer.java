@@ -9,14 +9,14 @@ public class Customer {
     private String bNo;
     private String name;
     private String address;
-    private int contactNo;
+    private String contactNo;
 
     //-------------------------
     //      CONSTRUCTORS
     //-------------------------
     public Customer(){}
 
-    public Customer(String cNo, String bNo, String name, String address, int contactNo) {
+    public Customer(String cNo, String bNo, String name, String address, String contactNo) {
         this.cNo = cNo;
         this.bNo = bNo;
         this.name = name;
@@ -44,11 +44,14 @@ public class Customer {
         return address;
     }
 
-    public int getContactNo() {
+    public String getContactNo() {
         return contactNo;
     }
 
-
+    public String get(int n){
+        String[] array = {cNo, bNo, name, address, contactNo};
+        return array[n];
+    }
     //-------------------------
     //      SETTERS
     //-------------------------
@@ -69,7 +72,32 @@ public class Customer {
         this.address = address;
     }
 
-    public void setContactNo(int contactNo) {
-        this.contactNo = contactNo;
+    public void setContactNo(String contactNo) {
+        if(contactNo.matches("[0-9]+"))
+            this.contactNo = contactNo;
+        else
+            System.out.println("Only numbers allowed");
+    }
+
+    public void editDetails(int n, String newValue){
+        String[] array = {cNo, bNo, name, address, contactNo};
+        array[n] = newValue;
+        this.cNo = array[0];
+        this.bNo = array[1];
+        this.name = array[2];
+        this.address = array[3];
+        this.contactNo = array[4];
+    }
+
+    public void setNewValues(Customer c){
+        this.cNo = c.cNo;
+        this.bNo = c.bNo;
+        this.name = c.name;
+        this.address = c.address;
+        this.contactNo = c.contactNo;
+    }
+
+    public String toString(){
+        return String.format("%s : %s : %s : %s : %s%n",cNo,bNo,name,address,contactNo);
     }
 }

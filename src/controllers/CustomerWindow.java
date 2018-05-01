@@ -3,15 +3,25 @@ package controllers;
 import classes.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
+
+import static javafx.scene.control.cell.TextFieldTableCell.forTableColumn;
+import static javafx.scene.input.KeyCode.C;
+import static javafx.scene.input.KeyCode.ENTER;
 
 public class CustomerWindow {
 
@@ -44,6 +54,7 @@ public class CustomerWindow {
     private Validator validator;
     private String tableName;
     private Customer customer;
+    private ArrayList<Customer> customerList;
 
     @FXML
     private void initialize(){
@@ -66,21 +77,23 @@ public class CustomerWindow {
                 if(action.equalsIgnoreCase("Update")) {
                     this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
+                    setColumnsEditable();
                     tableView.setOnKeyPressed(event -> {
                         TablePosition<Customer, ?> pos = tableView.getFocusModel().getFocusedCell() ;
-                        if (pos != null && event.getCode().isLetterKey()) {
-                            tableView.edit(pos.getRow(), pos.getTableColumn());
-                            System.out.println("--------------"+pos.getRow()+ "   "+ pos.getTableColumn());
+                        if (pos != null && event.getCode() == ENTER) {
+                            int row = pos.getRow();
+                            TableColumn<Customer, ?> col = pos.getTableColumn();
+                            tableView.edit(row, col);
+                            col.setOnEditCommit(t ->
+                            {(
+                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                                        .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                                    Customer rowData = t.getRowValue();
+                                    String newValue = (String)t.getNewValue();
+                                    SQLQuery query = new SQLQuery();
+                                    query.updateQuery(con,tableName,col.getText(),newValue,rowData.getCNo());
+                            });
                         }
-                    });
-                    confirmButton.setOnAction(e-> {
-                        Customer selectedItem = tableView.getSelectionModel().getSelectedItem();
-                        tableView.getItems().remove(selectedItem);
-                        SQLQuery query = new SQLQuery();
-                        query.updateQuery(con,tableName,selectedItem.getCNo(),selectedItem.getBNo(),
-                                selectedItem.getName(),selectedItem.getAddress(),
-                                Integer.toString(selectedItem.getContactNo()));
-                        System.out.println(tableView);
                     });
                 }
                 else if(action.equalsIgnoreCase("Delete")){
@@ -110,7 +123,7 @@ public class CustomerWindow {
             SQLQuery sqlQuery = new SQLQuery();
             sqlQuery.insertQuery(con, this.tableName,
                     customer.getCNo(), customer.getBNo(), customer.getName(),
-                    customer.getAddress(), Integer.toString(customer.getContactNo()));
+                    customer.getAddress(), customer.getContactNo());
         }
         Stage s = (Stage)paneFrame.getScene().getWindow();
         s.close();
@@ -125,8 +138,16 @@ public class CustomerWindow {
         this.contactNoCol.setCellValueFactory(new PropertyValueFactory<>("ContactNo"));
     }
 
+    private void setColumnsEditable(){
+        bNoCol.setCellFactory(column -> EditCell.createStringEditCell());
+        nameCol.setCellFactory(column -> EditCell.createStringEditCell());
+        addressCol.setCellFactory(column -> EditCell.createStringEditCell());
+        contactNoCol.setCellFactory(column -> EditCell.createStringEditCell());
+    }
+
     private void fillTable(){
         ObservableList<Customer> ol = FXCollections.observableArrayList();
+        customerList = new ArrayList<>();
         Statement s;
         try {
             s = con.createStatement();
@@ -138,8 +159,9 @@ public class CustomerWindow {
                 Customer c = new Customer(
                         rs.getString (index++),rs.getString(index++),
                         rs.getString(index++),rs.getString (index++),
-                        rs.getInt (index));
+                        rs.getString (index));
                 ol.add(c);
+                customerList.add(c);
             }
             this.tableView.setItems(ol);
         } catch (SQLException e) {

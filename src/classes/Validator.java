@@ -26,11 +26,11 @@ public class Validator {
         this.cont = false;
         return null;
     }
-    public int validateTextFieldInputInt(String s){
+    public String validateTextFieldInputInt(String s){
         if(s.matches("[0-9]+"))
-            return Integer.parseInt(s);
+            return s;
         this.cont = false;
-        return 0;
+        return null;
     }
 
     public String getNumber(Connection con, String table){

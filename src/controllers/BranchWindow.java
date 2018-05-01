@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static javafx.scene.input.KeyCode.ENTER;
+
 public class BranchWindow {
 
     @FXML
@@ -61,7 +63,28 @@ public class BranchWindow {
                 setColumns();
                 fillTable();
                 if(action.equalsIgnoreCase("Update")) {
+                    this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
+                    setColumnsEditable();
+                    //---------------------------------
+                    tableView.setOnKeyPressed(event -> {
+                        TablePosition<Branch, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+                        if (pos != null && event.getCode() == ENTER) {
+                            int row = pos.getRow();
+                            TableColumn<Branch, ?> col = pos.getTableColumn();
+                            tableView.edit(row, col);
+                            col.setOnEditCommit(t ->
+                            {(
+                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                                    .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                                Branch rowData = t.getRowValue();
+                                String newValue = (String)t.getNewValue();
+                                SQLQuery query = new SQLQuery();
+                                query.updateQuery(con,tableName,col.getText(),newValue,rowData.getBNo());
+                            });
+                        }
+                    });
+                    //-------------------------
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -92,7 +115,8 @@ public class BranchWindow {
             this.branch.setBNo(validator.getNumber(con, this.tableName));
             System.out.println("Database connection established1");
             SQLQuery sqlQuery = new SQLQuery();
-            sqlQuery.insertQuery(con, this.tableName, branch.getBNo());
+            sqlQuery.insertQuery(con, this.tableName, branch.getBNo(), branch.getStreet(),
+                    branch.getCity(), branch.getCounty(), branch.getContactNo());
         }
         Stage s = (Stage)paneFrame.getScene().getWindow();
         s.close();
@@ -106,6 +130,13 @@ public class BranchWindow {
         this.contactNoCol.setCellValueFactory(new PropertyValueFactory<>("ContactNo"));
     }
 
+    private void setColumnsEditable(){
+        streetCol.setCellFactory(column -> EditCell.createStringEditCell());
+        cityCol.setCellFactory(column -> EditCell.createStringEditCell());
+        countyCol.setCellFactory(column -> EditCell.createStringEditCell());
+        contactNoCol.setCellFactory(column -> EditCell.createStringEditCell());
+    }
+
     private void fillTable(){
         ObservableList<Branch> ol = FXCollections.observableArrayList();
         Statement s;
@@ -117,7 +148,7 @@ public class BranchWindow {
             {
                 int index = 1;
                 Branch b = new Branch(rs.getString (index++),rs.getString(index++),
-                        rs.getString(index++), rs.getString(index++), rs.getInt(index));
+                        rs.getString(index++), rs.getString(index++), rs.getString(index));
                 ol.add(b);
             }
             this.tableView.setItems(ol);

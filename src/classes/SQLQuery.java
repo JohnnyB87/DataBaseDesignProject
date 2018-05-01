@@ -52,7 +52,21 @@ public class SQLQuery {
         System.out.printf("%s table updated",tableName);
     }
 
-    public void updateQuery(Connection con,String tableName, String... array){
-
+    public void updateQuery(Connection con,String tableName, String colName, String newValue, String idNo){
+        try {
+            //update
+            colName = colName.replaceAll("\\s+", "");
+            String id = tableName.charAt(0)+"no";
+            Statement updateStmt = con.createStatement();
+            String updateSQL = String.format("Update %s set %s = '%s' where %s ='%s'"
+                    ,tableName,colName,newValue,id,idNo);
+            int res = updateStmt.executeUpdate(updateSQL);
+            System.out.println("The Number or records updated is      " +res);
+            // You May need to uncomment if Autocommit is not set
+            //con.commit();
+            updateStmt.close();
+        }catch (Exception io) {
+            System.out.println("error"+io);
+        }
     }
 }
