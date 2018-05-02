@@ -3,39 +3,36 @@ package controllers;
 import classes.Main;
 import classes.PaneFrame;
 import classes.SQLQuery;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class JoinTableController {
 
-    @FXML
-    private PaneFrame paneFrame;
-    @FXML
-    private ComboBox<String> branchNo;
-    @FXML
-    private ComboBox<String> staffCol;
-    @FXML
-    private Button joinBranchStaff;
-    @FXML
-    private ComboBox<String> branchNoCustomer;
-    @FXML
-    private ComboBox<String> customerCol;
-    @FXML
-    private Button joinBranchCustomer;
-    @FXML
-    private ComboBox<String> customerNo;
-    @FXML
-    private ComboBox<String> accCol;
-    @FXML
-    private Button customerAccount;
+    @FXML private TableView<List<String>> tableView;
+    @FXML private PaneFrame paneFrame;
+    @FXML private ComboBox<String> branchNo;
+    @FXML private ComboBox<String> staffCol;
+    @FXML private Button joinBranchStaff;
+    @FXML private ComboBox<String> branchNoCustomer;
+    @FXML private ComboBox<String> customerCol;
+    @FXML private Button joinBranchCustomer;
+    @FXML private ComboBox<String> customerNo;
+    @FXML private ComboBox<String> accCol;
+    @FXML private Button customerAccount;
 
+    private List<String> colListNames;
+    private List<List<String>> data;
     private Connection con;
     private String bNoS;
     private String cNo;
@@ -43,6 +40,7 @@ public class JoinTableController {
     private String cCol;
     private String aCol;
     private String sCol;
+
     @FXML
     private void initialize(){
         con = Main.getCon();
@@ -53,7 +51,7 @@ public class JoinTableController {
         this.branchNo.setItems(loopThroughTable("Branch","Bno"));
         this.branchNoCustomer.setItems(loopThroughTable("Branch","Bno"));
         this.customerNo.setItems(loopThroughTable("Customer","Cno"));
-        this.accCol.setItems(loopThroughTableCol("Account"));
+        this.accCol.setItems(loopThroughTableCol("CustomerAccount"));
         this.staffCol.setItems(loopThroughTableCol("Staff"));
         this.customerCol.setItems(loopThroughTableCol("Customer"));
     }
@@ -91,25 +89,90 @@ public class JoinTableController {
         return array;
     }
 
-    public void searchBranchStaffBtn() {
-        SQLQuery sql = new SQLQuery();
-        String table1 = "Branch";
-        String table2 = "Staff";
-        sql.joinQuery(con,table1,table2,this.bNoS,this.sCol);
+    private void getAllData(ResultSet rs){
+        this.tableView.getColumns().clear();
+        this.colListNames = new ArrayList<>();
+        this.data = new ArrayList<>();
+        try {
+            ResultSetMetaData meta = rs.getMetaData();
+            int count = meta.getColumnCount();
+
+            for(int i=1;i<=count;i++){
+                this.colListNames.add(meta.getColumnName(i));
+            }
+
+            while(rs.next()){
+                List<String> row = new ArrayList<>();
+                for(int i=1; i<=count;i++){
+                    String s = rs.getString(i);
+                    row.add(s);
+                }
+                data.add(row);
+            }
+
+            fillTable();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void searchBranchCustomerBtn() {
-        SQLQuery sql = new SQLQuery();
-        String table1 = "Branch";
-        String table2 = "Customer";
-        sql.joinQuery(con,table1,table2,this.bNoC,this.cCol);
+    private void fillTable(){
+        for (int i = 0 ; i < colListNames.size() ; i++) {
+            TableColumn<List<String>, String> column = new TableColumn<>(colListNames.get(i));
+            int columnIndex = i ;
+            column.setCellValueFactory(cellData ->
+                    new SimpleObjectProperty<>(cellData.getValue().get(columnIndex)));
+            tableView.getColumns().add(column);
+
+        }
+        tableView.getItems().setAll(this.data);
     }
 
-    public void searchCustomerAccBtn() {
-        SQLQuery sql = new SQLQuery();
-        String table1 = "Customer";
-        String table2 = "Account";
-        sql.joinQuery(con,table1,table2,this.cNo,this.aCol);
+    @FXML
+    private void searchBranchStaffBtn(){
+        try{
+            SQLQuery sql = new SQLQuery();
+            String table1 = "Branch";
+            String table2 = "Staff";
+            ResultSet rs = sql.joinQuery(con, table1, table2, this.bNoS, this.sCol);
+            getAllData(rs);
+            rs.close();
+        }
+        catch(SQLException | NullPointerException e){
+            System.out.println("Invalid Selections");
+        }
+    }
+
+    @FXML
+    private void searchBranchCustomerBtn() {
+        try {
+            SQLQuery sql = new SQLQuery();
+            String table1 = "Branch";
+            String table2 = "Customer";
+            ResultSet rs = sql.joinQuery(con, table1, table2, this.bNoC, this.cCol);
+            getAllData(rs);
+            rs.close();
+        }
+        catch(SQLException | NullPointerException e){
+            System.out.println("Invalid Selections");
+        }
+
+    }
+
+    @FXML
+    private void searchCustomerAccBtn() {
+        try{
+            SQLQuery sql = new SQLQuery();
+            String table1 = "Customer";
+            String table2 = "CustomerAccount";
+            ResultSet rs = sql.joinQuery(con, table1, table2, this.cNo, this.aCol);
+            getAllData(rs);
+            rs.close();
+        }
+        catch(SQLException | NullPointerException e){
+            System.out.println("Invalid Selections");
+        }
     }
 
     @FXML

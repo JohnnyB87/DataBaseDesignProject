@@ -70,7 +70,8 @@ public class SQLQuery {
         }
     }
 
-    public void joinQuery(Connection con, String tableName1, String tableName2, String colNameJoin, String colNameSearch){
+    public ResultSet joinQuery(Connection con, String tableName1, String tableName2, String colNameJoin, String colNameSearch){
+        ResultSet rs = null;
         try{
             String select = colNameSearch.equalsIgnoreCase("all") ?
                     "*" : String.format("%s.%s",tableName2, colNameSearch);
@@ -79,26 +80,14 @@ public class SQLQuery {
                     ,select, tableName2, tableName1, tableName2,no,tableName1,no,tableName1,no,colNameJoin);
 
             System.out.println(query);
-//            SELECT Name FROM Staff INNER JOIN Branch ON Staff.BNo=Branch.BNo where Branch.BNo='B004'
+
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            ResultSetMetaData meta = rs.getMetaData();
-            int count = meta.getColumnCount();
-            for(int i=1;i<=count;i++){
-                System.out.print(meta.getColumnName(i)+"\t\t");
-            }
-            System.out.println();
-            while(rs.next()) {
-                for (int i = 1; i <= count; i++) {
-                    if (i > 1) System.out.print(",  ");
-                    String columnValue = rs.getString(i);
-                    System.out.print(columnValue);
-                }
-            }
-            stmt.close();
+            rs = stmt.executeQuery(query);
         }catch(SQLException sql){
             System.out.println("FAILED JOIN");
             sql.printStackTrace();
         }
+
+        return rs;
     }
 }

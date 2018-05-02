@@ -6,13 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class SecondMenuWindow {
+public class SecondMenuController {
 
     @FXML
     private Button newBranch;
@@ -70,19 +69,19 @@ public class SecondMenuWindow {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(str));
             this.pane = loader.load();
             if (this.buttonPressed.equalsIgnoreCase("account")) {
-                AccountWindow aController = loader.getController();
+                AccountController aController = loader.getController();
                 aController.getTitleLabel().setText(String.format("%s Account record", this.menuName));
             }
             else if (this.buttonPressed.equalsIgnoreCase("branch")) {
-                BranchWindow bController = loader.getController();
+                BranchController bController = loader.getController();
                 bController.getTitleLabel().setText(String.format("%s Branch record", this.menuName));
             }
             else if (this.buttonPressed.equalsIgnoreCase("customer")) {
-                CustomerWindow cController = loader.getController();
+                CustomerController cController = loader.getController();
                 cController.getTitleLabel().setText(String.format("%s Customer record", this.menuName));
             }
             else{
-                StaffWindow sController = loader.getController();
+                StaffController sController = loader.getController();
                 sController.getTitleLabel().setText(String.format("%s Staff record", this.menuName));
             }
             this.pane.setConfirmButtonText(this.menuName);
@@ -104,7 +103,7 @@ public class SecondMenuWindow {
         stage.setTitle(title);
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.initOwner(MainWindow.getStage());
+        stage.initOwner(MainMenuController.getStage());
         stage.showAndWait();
     }
 }

@@ -12,7 +12,7 @@ import java.sql.*;
 
 import static javafx.scene.input.KeyCode.ENTER;
 
-public class AccountWindow{
+public class AccountController {
 
     @FXML
     private PaneFrame paneFrame;

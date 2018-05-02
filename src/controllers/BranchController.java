@@ -15,7 +15,7 @@ import java.sql.Statement;
 
 import static javafx.scene.input.KeyCode.ENTER;
 
-public class BranchWindow {
+public class BranchController {
 
     @FXML
     private PaneFrame paneFrame;

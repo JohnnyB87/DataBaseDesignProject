@@ -12,31 +12,34 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainWindow{
+public class MainMenuController {
 
     private Pane pane;
     private static Stage stage;
-    private int width = 350;
-    private int height = 300;
+    private int width;
+    private int height;
 
     public void buttonPressed(ActionEvent e) throws IOException {
         Button b = (Button)e.getSource();
         String buttonPressed = b.getText();
         Main.setButtonPressed(buttonPressed);
         FXMLLoader loader;
-        if(!buttonPressed.equalsIgnoreCase("joinTable")){
+        System.out.println(buttonPressed);
+        if(!(buttonPressed.equalsIgnoreCase("joinTable"))){
             loader = new FXMLLoader(getClass().getResource("../resources/SecondMenuWindow.fxml"));
-            SecondMenuWindow addMenu = loader.getController();
+            this.pane = loader.load();
+            SecondMenuController addMenu = loader.getController();
             addMenu.getTitleLabel().setText(buttonPressed + " Menu");
             addMenu.setMenuName(buttonPressed);
+            width = 350;
+            height = 300;
         }
         else{
             width = 500;
             height = 400;
             loader = new FXMLLoader(getClass().getResource("../resources/JoinTableWindow.fxml"));
+            this.pane = loader.load();
         }
-        this.pane = loader.load();
-
         createNewStage(buttonPressed);
     }
 

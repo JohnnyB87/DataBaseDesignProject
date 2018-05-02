@@ -23,7 +23,7 @@ import static javafx.scene.control.cell.TextFieldTableCell.forTableColumn;
 import static javafx.scene.input.KeyCode.C;
 import static javafx.scene.input.KeyCode.ENTER;
 
-public class CustomerWindow {
+public class CustomerController {
 
     @FXML
     private PaneFrame paneFrame;

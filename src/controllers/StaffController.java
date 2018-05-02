@@ -15,7 +15,7 @@ import java.sql.Statement;
 
 import static javafx.scene.input.KeyCode.ENTER;
 
-public class StaffWindow {
+public class StaffController {
 
     @FXML
     private TableView<Staff> tableView;

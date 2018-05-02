@@ -2,6 +2,7 @@
 <?import javafx.scene.layout.*?>
 <?import classes.PaneFrame?>
 
+<?import javafx.geometry.Insets?>
 <PaneFrame xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            fx:controller="controllers.JoinTableController"
@@ -16,20 +17,21 @@
     <center>
         <Pane BorderPane.alignment="CENTER">
             <HBox prefWidth="300" maxHeight="50" layoutX="100" spacing="50">
-                <ComboBox fx:id="branchNo" promptText="bNo" prefWidth="100" onAction="#setBNoS"/>
-                <ComboBox fx:id="staffCol" promptText="sCol" prefWidth="100" onAction="#setSCol"/>
+                <ComboBox fx:id="branchNo" promptText="bNo" prefWidth="120" onAction="#setBNoS"/>
+                <ComboBox fx:id="staffCol" promptText="sCol" prefWidth="120" onAction="#setSCol"/>
                 <Button fx:id="joinBranchStaff" text="Search" onAction="#searchBranchStaffBtn" prefWidth="100"/>
             </HBox>
             <HBox prefWidth="300" maxHeight="50"  layoutX="100" layoutY="30" spacing="50">
-                <ComboBox fx:id="branchNoCustomer" promptText="bNo" prefWidth="100" onAction="#setBNoC"/>
-                <ComboBox fx:id="customerCol" promptText="cCol" prefWidth="100" onAction="#setCCol"/>
+                <ComboBox fx:id="branchNoCustomer" promptText="bNo" prefWidth="120" onAction="#setBNoC"/>
+                <ComboBox fx:id="customerCol" promptText="cCol" prefWidth="120" onAction="#setCCol"/>
                 <Button fx:id="joinBranchCustomer" text="Search" onAction="#searchBranchCustomerBtn" prefWidth="100"/>
             </HBox>
             <HBox prefWidth="300" maxHeight="50" layoutX="100" layoutY="60" spacing="50">
-                <ComboBox fx:id="customerNo" promptText="cNo" prefWidth="100" onAction="#setCNo"/>
-                <ComboBox fx:id="accCol" promptText="aCol" prefWidth="100" onAction="#setACol"/>
+                <ComboBox fx:id="customerNo" promptText="cNo" prefWidth="120" onAction="#setCNo"/>
+                <ComboBox fx:id="accCol" promptText="aCol" prefWidth="120" onAction="#setACol"/>
                 <Button fx:id="customerAccount" text="Search" onAction="#searchCustomerAccBtn" prefWidth="100"/>
             </HBox>
+            <TableView fx:id="tableView" prefHeight="150.0" prefWidth="400.0" layoutX="50" layoutY="90"/>
         </Pane>
     </center>
 </PaneFrame>
