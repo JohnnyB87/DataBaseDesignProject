@@ -3,58 +3,37 @@ package controllers;
 import classes.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
 
-import static javafx.scene.control.cell.TextFieldTableCell.forTableColumn;
-import static javafx.scene.input.KeyCode.C;
 import static javafx.scene.input.KeyCode.ENTER;
 
 public class CustomerController {
 
-    @FXML
-    private PaneFrame paneFrame;
-    @FXML
-    private Label titleLabel;
-    @FXML
-    private TextField nameTxtFld;
-    @FXML
-    private TextField addressTxtFld;
-    @FXML
-    private TextField contactTxtFld;
-    @FXML
-    private ComboBox<String> bNoComboBox;
-    @FXML
-    private TableView<Customer> tableView;
-    @FXML
-    private TableColumn<Customer, String> cNoCol;
-    @FXML
-    private TableColumn<Customer, String> bNoCol;
-    @FXML
-    private TableColumn<Customer, String> nameCol;
-    @FXML
-    private TableColumn<Customer, String> addressCol;
-    @FXML
-    private TableColumn<Customer, String> contactNoCol;
+    @FXML private PaneFrame paneFrame;
+    @FXML private Label titleLabel;
+    @FXML private TextField nameTxtFld;
+    @FXML private TextField addressTxtFld;
+    @FXML private TextField contactTxtFld;
+    @FXML private ComboBox<String> bNoComboBox;
+    @FXML private TableView<Customer> tableView;
+    @FXML private TableColumn<Customer, String> cNoCol;
+    @FXML private TableColumn<Customer, String> bNoCol;
+    @FXML private TableColumn<Customer, String> nameCol;
+    @FXML private TableColumn<Customer, String> addressCol;
+    @FXML private TableColumn<Customer, String> contactNoCol;
 
     private Connection con;
     private Validator validator;
     private String tableName;
     private Customer customer;
-    private ArrayList<Customer> customerList;
 
     @FXML
     private void initialize(){
@@ -151,7 +130,6 @@ public class CustomerController {
 
     private void fillTable(){
         ObservableList<Customer> ol = FXCollections.observableArrayList();
-        customerList = new ArrayList<>();
         Statement s;
         try {
             s = con.createStatement();
@@ -165,7 +143,6 @@ public class CustomerController {
                         rs.getString(index++),rs.getString (index++),
                         rs.getString (index));
                 ol.add(c);
-                customerList.add(c);
             }
             this.tableView.setItems(ol);
         } catch (SQLException e) {

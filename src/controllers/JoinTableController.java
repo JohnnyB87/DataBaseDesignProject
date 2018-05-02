@@ -1,14 +1,12 @@
 package controllers;
 
 import classes.Main;
-import classes.PaneFrame;
 import classes.SQLQuery;
-import javafx.beans.property.ReadOnlyObjectWrapper;
+
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -20,16 +18,12 @@ import java.util.List;
 public class JoinTableController {
 
     @FXML private TableView<List<String>> tableView;
-    @FXML private PaneFrame paneFrame;
     @FXML private ComboBox<String> branchNo;
     @FXML private ComboBox<String> staffCol;
-    @FXML private Button joinBranchStaff;
     @FXML private ComboBox<String> branchNoCustomer;
     @FXML private ComboBox<String> customerCol;
-    @FXML private Button joinBranchCustomer;
     @FXML private ComboBox<String> customerNo;
     @FXML private ComboBox<String> accCol;
-    @FXML private Button customerAccount;
 
     private List<String> colListNames;
     private List<List<String>> data;

@@ -57,7 +57,7 @@ public class MainMenuController {
         stage.initOwner(Main.getPrimaryStage());
         stage.showAndWait();
     }
-    public static Stage getStage(){
+    static Stage getStage(){
         return stage;
     }
 

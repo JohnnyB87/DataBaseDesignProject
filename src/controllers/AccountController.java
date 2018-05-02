@@ -1,35 +1,27 @@
 package controllers;
 
 import classes.*;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import static javafx.scene.input.KeyCode.ENTER;
 
 import java.sql.*;
 
-import static javafx.scene.input.KeyCode.ENTER;
-
 public class AccountController {
 
-    @FXML
-    private PaneFrame paneFrame;
-    @FXML
-    private Label titleLabel;
-    @FXML
-    private TableView<Account> tableView;
-    @FXML
-    private TableColumn<Account, String> accNoCol;
-    @FXML
-    private TableColumn<Account, String> accTypeCol;
-    @FXML
-    private TableColumn<Account, String> accDesCol;
-    @FXML
-    private TextField accountType;
-    @FXML
-    private TextField accountDescription;
+    @FXML private PaneFrame paneFrame;
+    @FXML private Label titleLabel;
+    @FXML private TableView<Account> tableView;
+    @FXML private TableColumn<Account, String> accNoCol;
+    @FXML private TableColumn<Account, String> accTypeCol;
+    @FXML private TableColumn<Account, String> accDesCol;
+    @FXML private TextField accountType;
+    @FXML private TextField accountDescription;
 
     private Account account;
     private String tableName;

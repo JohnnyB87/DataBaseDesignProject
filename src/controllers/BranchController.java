@@ -17,30 +17,18 @@ import static javafx.scene.input.KeyCode.ENTER;
 
 public class BranchController {
 
-    @FXML
-    private PaneFrame paneFrame;
-    @FXML
-    private Label titleLabel;
-    @FXML
-    private TextField streetTxtFld;
-    @FXML
-    private TextField countyTxtFld;
-    @FXML
-    private TextField cityTxtFld;
-    @FXML
-    private TextField contactTxtFld;
-    @FXML
-    private TableView<Branch> tableView;
-    @FXML
-    private TableColumn<Branch, String> bNoCol;
-    @FXML
-    private TableColumn<Branch, String> streetCol;
-    @FXML
-    private TableColumn<Branch, String> cityCol;
-    @FXML
-    private TableColumn<Branch, String> countyCol;
-    @FXML
-    private TableColumn<Branch, String> contactNoCol;
+    @FXML private PaneFrame paneFrame;
+    @FXML private Label titleLabel;
+    @FXML private TextField streetTxtFld;
+    @FXML private TextField countyTxtFld;
+    @FXML private TextField cityTxtFld;
+    @FXML private TextField contactTxtFld;
+    @FXML private TableView<Branch> tableView;
+    @FXML private TableColumn<Branch, String> bNoCol;
+    @FXML private TableColumn<Branch, String> streetCol;
+    @FXML private TableColumn<Branch, String> cityCol;
+    @FXML private TableColumn<Branch, String> countyCol;
+    @FXML private TableColumn<Branch, String> contactNoCol;
 
     private Connection con;
     private String tableName;

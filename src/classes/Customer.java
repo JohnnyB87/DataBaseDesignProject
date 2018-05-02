@@ -48,10 +48,6 @@ public class Customer {
         return contactNo;
     }
 
-    public String get(int n){
-        String[] array = {cNo, bNo, name, address, contactNo};
-        return array[n];
-    }
     //-------------------------
     //      SETTERS
     //-------------------------
@@ -87,14 +83,6 @@ public class Customer {
         this.name = array[2];
         this.address = array[3];
         this.contactNo = array[4];
-    }
-
-    public void setNewValues(Customer c){
-        this.cNo = c.cNo;
-        this.bNo = c.bNo;
-        this.name = c.name;
-        this.address = c.address;
-        this.contactNo = c.contactNo;
     }
 
     public String toString(){

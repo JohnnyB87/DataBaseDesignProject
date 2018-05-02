@@ -17,30 +17,19 @@ import static javafx.scene.input.KeyCode.ENTER;
 
 public class StaffController {
 
-    @FXML
-    private TableView<Staff> tableView;
-    @FXML
-    private TableColumn<Staff,String> sNoCol;
-    @FXML
-    private TableColumn<Staff,String> bNoCol;
-    @FXML
-    private TableColumn<Staff,String> nameCol;
-    @FXML
-    private TableColumn<Staff,String> posCol;
-    @FXML
-    private TableColumn<Staff,String> contactNoCol;
-    @FXML
-    private PaneFrame paneFrame;
-    @FXML
-    private Label titleLabel;
-    @FXML
-    private TextField nameTxtFld;
-    @FXML
-    private TextField contactTxtFld;
-    @FXML
-    private ComboBox<String> bNoComboBox;
-    @FXML
-    private ComboBox<String> posComboBox;
+    @FXML private TableView<Staff> tableView;
+    @FXML private TableColumn<Staff,String> sNoCol;
+    @FXML private TableColumn<Staff,String> bNoCol;
+    @FXML private TableColumn<Staff,String> nameCol;
+    @FXML private TableColumn<Staff,String> posCol;
+    @FXML private TableColumn<Staff,String> contactNoCol;
+    @FXML private PaneFrame paneFrame;
+    @FXML private Label titleLabel;
+    @FXML private TextField nameTxtFld;
+    @FXML private TextField contactTxtFld;
+    @FXML private ComboBox<String> bNoComboBox;
+    @FXML private ComboBox<String> posComboBox;
+
     private Staff staff;
     private Validator validator;
     private String tableName;

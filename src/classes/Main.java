@@ -1,6 +1,5 @@
 package classes;
 
-import controllers.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -45,7 +44,6 @@ public class Main extends Application{
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/MainMenuWindow.fxml"));
         Pane mainWindow = loader.load();
-        MainMenuController mw = loader.getController();
 
         StackPane layout = new StackPane();
 

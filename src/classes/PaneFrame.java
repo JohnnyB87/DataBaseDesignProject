@@ -37,10 +37,6 @@ public class PaneFrame extends BorderPane {
         return confirmButton;
     }
 
-    public void setConfirmButton(Button confirmButton) {
-        this.confirmButton = confirmButton;
-    }
-
     public void setConfirmButtonText(String text) {
         this.confirmButton.setText(text);
     }

@@ -13,16 +13,12 @@ import java.io.IOException;
 
 public class SecondMenuController {
 
-    @FXML
-    private Button newBranch;
-    @FXML
-    private Button newStaff;
-    @FXML
-    private Button newCustomer;
-    @FXML
-    private Button newAccount;
-    @FXML
-    private Label titleLabel;
+    @FXML private Button newBranch;
+    @FXML private Button newStaff;
+    @FXML private Button newCustomer;
+    @FXML private Button newAccount;
+    @FXML private Label titleLabel;
+
     private PaneFrame pane;
     private String menuName;
     private String buttonPressed;
