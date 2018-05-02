@@ -4,15 +4,13 @@
 
 <PaneFrame xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
-           fx:controller="controllers.AccountWindow"
+           fx:controller="controllers.AccountController"
            prefHeight="400.0" prefWidth="600.0"
            style="-fx-background-color: #bcbcbc;"
            fx:id="paneFrame">
     <top>
         <VBox alignment="CENTER" prefHeight="78.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <Label fx:id="titleLabel" text="Add Account" style="-fx-font-size: 30;"/>
-            </children>
+            <Label fx:id="titleLabel" text="Add Account" style="-fx-font-size: 30;"/>
         </VBox>
     </top>
     <center>

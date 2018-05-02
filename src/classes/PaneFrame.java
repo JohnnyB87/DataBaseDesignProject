@@ -37,15 +37,13 @@ public class PaneFrame extends BorderPane {
         return confirmButton;
     }
 
-    public void setConfirmButton(Button confirmButton) {
-        this.confirmButton = confirmButton;
+    public void setConfirmButtonText(String text) {
+        this.confirmButton.setText(text);
     }
 
-    public void quitButtonPressed() {
+    private void quitButtonPressed() {
         Stage stage = (Stage)this.getScene().getWindow();
         stage.close();
     }
-
-    public void confirmButtonPressed(){}
 
 }

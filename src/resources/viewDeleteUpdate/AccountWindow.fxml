@@ -5,15 +5,13 @@
 
 <PaneFrame xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
-           fx:controller="controllers.AccountWindow"
+           fx:controller="controllers.AccountController"
            prefHeight="400.0" prefWidth="600.0"
            style="-fx-background-color: #bcbcbc;"
            fx:id="paneFrame">
     <top>
         <VBox alignment="CENTER" prefHeight="78.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <Label fx:id="titleLabel" style="-fx-font-size: 30;"/>
-            </children>
+            <Label fx:id="titleLabel" style="-fx-font-size: 30;"/>
         </VBox>
     </top>
     <center>
@@ -21,6 +19,11 @@
             <BorderPane.margin>
                 <Insets left="25.0" right="25.0"/>
             </BorderPane.margin>
+            <columns>
+                <TableColumn fx:id="accNoCol" text="aNo" minWidth="100"/>
+                <TableColumn fx:id="accTypeCol" text="Type" minWidth="100"/>
+                <TableColumn fx:id="accDesCol" text="Description" minWidth="150"/>
+            </columns>
         </TableView>
     </center>
 </PaneFrame>

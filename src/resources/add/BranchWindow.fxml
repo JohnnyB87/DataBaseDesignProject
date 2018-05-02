@@ -4,29 +4,25 @@
 
 <PaneFrame xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
-           fx:controller="controllers.BranchWindow"
+           fx:controller="controllers.BranchController"
            prefHeight="400.0" prefWidth="600.0"
            style="-fx-background-color: #bcbcbc;"
            fx:id="paneFrame">
     <top>
         <VBox alignment="CENTER" prefHeight="78.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <Label fx:id="titleLabel" text="Add Branch" style="-fx-font-size: 30;"/>
-            </children>
+            <Label fx:id="titleLabel" text="Add Branch" style="-fx-font-size: 30;"/>
         </VBox>
     </top>
     <center>
         <Pane prefHeight="222.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-            <children>
-                <TextField fx:id="streetTxtFld" layoutX="194.0"/>
-                <TextField fx:id="cityTxtFld" layoutX="194.0" layoutY="30.0" />
-                <TextField fx:id="countyTxtFld" layoutX="194.0" layoutY="60.0" />
-                <TextField fx:id="contactTxtFld" layoutX="194.0" layoutY="90.0" />
-                <Label layoutX="103.0" layoutY="4.0" text="Street: " />
-                <Label layoutX="103.0" layoutY="34.0" text="City: " />
-                <Label layoutX="103.0" layoutY="64.0" text="County: " />
-                <Label layoutX="103.0" layoutY="94.0" text="Contact No.: " />
-            </children>
+            <TextField fx:id="streetTxtFld" layoutX="194.0"/>
+            <TextField fx:id="cityTxtFld" layoutX="194.0" layoutY="30.0"/>
+            <TextField fx:id="countyTxtFld" layoutX="194.0" layoutY="60.0"/>
+            <TextField fx:id="contactTxtFld" layoutX="194.0" layoutY="90.0"/>
+            <Label layoutX="103.0" layoutY="4.0" text="Street: "/>
+            <Label layoutX="103.0" layoutY="34.0" text="City: "/>
+            <Label layoutX="103.0" layoutY="64.0" text="County: "/>
+            <Label layoutX="103.0" layoutY="94.0" text="Contact No.: "/>
         </Pane>
     </center>
 </PaneFrame>
