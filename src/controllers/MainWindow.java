@@ -16,17 +16,27 @@ public class MainWindow{
 
     private Pane pane;
     private static Stage stage;
+    private int width = 350;
+    private int height = 300;
 
     public void buttonPressed(ActionEvent e) throws IOException {
         Button b = (Button)e.getSource();
         String buttonPressed = b.getText();
         Main.setButtonPressed(buttonPressed);
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/SecondMenuWindow.fxml"));
+        FXMLLoader loader;
+        if(!buttonPressed.equalsIgnoreCase("joinTable")){
+            loader = new FXMLLoader(getClass().getResource("../resources/SecondMenuWindow.fxml"));
+            SecondMenuWindow addMenu = loader.getController();
+            addMenu.getTitleLabel().setText(buttonPressed + " Menu");
+            addMenu.setMenuName(buttonPressed);
+        }
+        else{
+            width = 500;
+            height = 400;
+            loader = new FXMLLoader(getClass().getResource("../resources/JoinTableWindow.fxml"));
+        }
         this.pane = loader.load();
-        SecondMenuWindow addMenu = loader.getController();
-        addMenu.getTitleLabel().setText(buttonPressed + " Menu");
-        addMenu.setMenuName(buttonPressed);
+
         createNewStage(buttonPressed);
     }
 
@@ -34,7 +44,7 @@ public class MainWindow{
         StackPane sp = new StackPane();
         sp.getChildren().add(this.pane);
 
-        Scene scene = new Scene(sp,350,300);
+        Scene scene = new Scene(sp,width,height);
         stage = new Stage();
 
         stage.initModality(Modality.WINDOW_MODAL);

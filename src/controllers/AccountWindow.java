@@ -54,24 +54,7 @@ public class AccountWindow{
                     this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
                     setColumnsEditable();
-                    //---------------------------------
-                    tableView.setOnKeyPressed(event -> {
-                        TablePosition<Account, ?> pos = tableView.getFocusModel().getFocusedCell() ;
-                        if (pos != null && event.getCode() == ENTER) {
-                            int row = pos.getRow();
-                            TableColumn<Account, ?> col = pos.getTableColumn();
-                            tableView.edit(row, col);
-                            col.setOnEditCommit(t ->
-                            {(
-                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
-                                    .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
-                                Account rowData = t.getRowValue();
-                                String newValue = (String)t.getNewValue();
-                                SQLQuery query = new SQLQuery();
-                                query.updateQuery(con,tableName,col.getText(),newValue,rowData.getAccNo());
-                            });
-                        }
-                    });
+                    editCell();
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -85,6 +68,26 @@ public class AccountWindow{
                 }
             }
         }
+    }
+
+    private void editCell() {
+        tableView.setOnKeyPressed(event -> {
+            TablePosition<Account, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+            if (pos != null && event.getCode() == ENTER) {
+                int row = pos.getRow();
+                TableColumn<Account, ?> col = pos.getTableColumn();
+                tableView.edit(row, col);
+                col.setOnEditCommit(t ->
+                {(
+                        t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                        .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                    Account rowData = t.getRowValue();
+                    String newValue = (String)t.getNewValue();
+                    SQLQuery query = new SQLQuery();
+                    query.updateQuery(con,tableName,col.getText(),newValue,rowData.getAccNo());
+                });
+            }
+        });
     }
 
     private void setColumns() {

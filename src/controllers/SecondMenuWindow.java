@@ -81,7 +81,7 @@ public class SecondMenuWindow {
                 CustomerWindow cController = loader.getController();
                 cController.getTitleLabel().setText(String.format("%s Customer record", this.menuName));
             }
-            else {
+            else{
                 StaffWindow sController = loader.getController();
                 sController.getTitleLabel().setText(String.format("%s Staff record", this.menuName));
             }

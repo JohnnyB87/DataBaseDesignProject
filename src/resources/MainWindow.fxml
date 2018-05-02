@@ -28,6 +28,7 @@
                         <Button fx:id="deleteButton" text="Delete" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
                         <Button fx:id="viewButton" text="View" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
                         <Button fx:id="updateButton" text="Update" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
+                        <Button fx:id="joinButton" text="JoinTable" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
                     </children>
                 </TilePane>
             </children>

@@ -78,23 +78,7 @@ public class CustomerWindow {
                     this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
                     setColumnsEditable();
-                    tableView.setOnKeyPressed(event -> {
-                        TablePosition<Customer, ?> pos = tableView.getFocusModel().getFocusedCell() ;
-                        if (pos != null && event.getCode() == ENTER) {
-                            int row = pos.getRow();
-                            TableColumn<Customer, ?> col = pos.getTableColumn();
-                            tableView.edit(row, col);
-                            col.setOnEditCommit(t ->
-                            {(
-                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
-                                        .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
-                                    Customer rowData = t.getRowValue();
-                                    String newValue = (String)t.getNewValue();
-                                    SQLQuery query = new SQLQuery();
-                                    query.updateQuery(con,tableName,col.getText(),newValue,rowData.getCNo());
-                            });
-                        }
-                    });
+                    editCells();
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -107,6 +91,26 @@ public class CustomerWindow {
                 }
             }
         }
+    }
+
+    private void editCells() {
+        tableView.setOnKeyPressed(event -> {
+            TablePosition<Customer, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+            if (pos != null && event.getCode() == ENTER) {
+                int row = pos.getRow();
+                TableColumn<Customer, ?> col = pos.getTableColumn();
+                tableView.edit(row, col);
+                col.setOnEditCommit(t ->
+                {(
+                        t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                        .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                    Customer rowData = t.getRowValue();
+                    String newValue = (String)t.getNewValue();
+                    SQLQuery query = new SQLQuery();
+                    query.updateQuery(con,tableName,col.getText(),newValue,rowData.getCNo());
+                });
+            }
+        });
     }
 
     private void confirmButtonPressed(){

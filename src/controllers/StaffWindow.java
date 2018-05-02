@@ -76,25 +76,7 @@ public class StaffWindow {
                     this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
                     setColumnsEditable();
-                    //---------------------------------
-                    tableView.setOnKeyPressed(event -> {
-                        TablePosition<Staff, ?> pos = tableView.getFocusModel().getFocusedCell() ;
-                        if (pos != null && event.getCode() == ENTER) {
-                            int row = pos.getRow();
-                            TableColumn<Staff, ?> col = pos.getTableColumn();
-                            tableView.edit(row, col);
-                            col.setOnEditCommit(t ->
-                            {(
-                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
-                                    .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
-                                Staff rowData = t.getRowValue();
-                                String newValue = (String)t.getNewValue();
-                                SQLQuery query = new SQLQuery();
-                                query.updateQuery(con,tableName,col.getText(),newValue,rowData.getSNo());
-                            });
-                        }
-                    });
-                    //-------------------------
+                    editCells();
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -108,6 +90,26 @@ public class StaffWindow {
                 }
             }
         }
+    }
+
+    private void editCells() {
+        tableView.setOnKeyPressed(event -> {
+            TablePosition<Staff, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+            if (pos != null && event.getCode() == ENTER) {
+                int row = pos.getRow();
+                TableColumn<Staff, ?> col = pos.getTableColumn();
+                tableView.edit(row, col);
+                col.setOnEditCommit(t ->
+                {(
+                        t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                        .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                    Staff rowData = t.getRowValue();
+                    String newValue = (String)t.getNewValue();
+                    SQLQuery query = new SQLQuery();
+                    query.updateQuery(con,tableName,col.getText(),newValue,rowData.getSNo());
+                });
+            }
+        });
     }
 
     private void confirmButtonPressed(){

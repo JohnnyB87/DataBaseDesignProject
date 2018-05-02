@@ -66,25 +66,7 @@ public class BranchWindow {
                     this.tableView.getSelectionModel().setCellSelectionEnabled(true);
                     this.tableView.setEditable(true);
                     setColumnsEditable();
-                    //---------------------------------
-                    tableView.setOnKeyPressed(event -> {
-                        TablePosition<Branch, ?> pos = tableView.getFocusModel().getFocusedCell() ;
-                        if (pos != null && event.getCode() == ENTER) {
-                            int row = pos.getRow();
-                            TableColumn<Branch, ?> col = pos.getTableColumn();
-                            tableView.edit(row, col);
-                            col.setOnEditCommit(t ->
-                            {(
-                                    t.getTableView().getItems().get(t.getTablePosition().getRow()))
-                                    .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
-                                Branch rowData = t.getRowValue();
-                                String newValue = (String)t.getNewValue();
-                                SQLQuery query = new SQLQuery();
-                                query.updateQuery(con,tableName,col.getText(),newValue,rowData.getBNo());
-                            });
-                        }
-                    });
-                    //-------------------------
+                    editCells();
                 }
                 else if(action.equalsIgnoreCase("Delete")){
                     this.tableView.setEditable(true);
@@ -99,6 +81,26 @@ public class BranchWindow {
             }
         }
         con = Main.getCon();
+    }
+
+    private void editCells() {
+        tableView.setOnKeyPressed(event -> {
+            TablePosition<Branch, ?> pos = tableView.getFocusModel().getFocusedCell() ;
+            if (pos != null && event.getCode() == ENTER) {
+                int row = pos.getRow();
+                TableColumn<Branch, ?> col = pos.getTableColumn();
+                tableView.edit(row, col);
+                col.setOnEditCommit(t ->
+                {(
+                        t.getTableView().getItems().get(t.getTablePosition().getRow()))
+                        .editDetails(t.getTablePosition().getColumn(),(String)t.getNewValue());
+                    Branch rowData = t.getRowValue();
+                    String newValue = (String)t.getNewValue();
+                    SQLQuery query = new SQLQuery();
+                    query.updateQuery(con,tableName,col.getText(),newValue,rowData.getBNo());
+                });
+            }
+        });
     }
 
     private void confirmButtonPressed(){
