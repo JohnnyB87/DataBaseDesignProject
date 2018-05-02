@@ -1,0 +1,38 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.MainMenuController"
+            prefHeight="300.0" prefWidth="400"
+            style="-fx-background-color: #bcbcbc;">
+    <children>
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
+            <children>
+                <Label alignment="CENTER" text="Main Menu" style="-fx-font-size: 30;">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets  bottom="-100"/>
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="1.0" layoutY="75.0" prefHeight="300.0" prefWidth="400.0">
+            <children>
+                <TilePane alignment="CENTER" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
+                    <children>
+                        <Button fx:id="addButton" text="Add" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
+                        <Button fx:id="deleteButton" text="Delete" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
+                        <Button fx:id="viewButton" text="View" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
+                        <Button fx:id="updateButton" text="Update" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
+                        <Button fx:id="joinButton" text="JoinTable" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" onAction="#buttonPressed"/>
+                    </children>
+                </TilePane>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>
