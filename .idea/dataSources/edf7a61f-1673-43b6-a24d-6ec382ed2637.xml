@@ -918,10 +918,17 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+<<<<<<< HEAD
     <table id="231" parent="2" name="accounts"/>
     <table id="232" parent="2" name="branchs"/>
     <table id="233" parent="2" name="customer"/>
     <table id="234" parent="2" name="customeraccounts"/>
+=======
+    <table id="231" parent="2" name="account"/>
+    <table id="232" parent="2" name="branch"/>
+    <table id="233" parent="2" name="customer"/>
+    <table id="234" parent="2" name="customeraccount"/>
+>>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
     <table id="235" parent="2" name="staff"/>
     <column id="236" parent="231" name="Ano">
       <Position>1</Position>
@@ -931,7 +938,11 @@
     </column>
     <column id="237" parent="231" name="Type">
       <Position>2</Position>
+<<<<<<< HEAD
       <DataType>varchar(10)|0s</DataType>
+=======
+      <DataType>varchar(20)|0s</DataType>
+>>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1022,7 +1033,11 @@
     <foreign-key id="253" parent="233" name="customer_ibfk_1">
       <ColNames>Bno</ColNames>
       <RefSchemaName>bank</RefSchemaName>
+<<<<<<< HEAD
       <RefTableName>branchs</RefTableName>
+=======
+      <RefTableName>branch</RefTableName>
+>>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
       <RefColNames>Bno</RefColNames>
     </foreign-key>
     <column id="254" parent="234" name="Cno">
@@ -1064,12 +1079,17 @@ Bno
 Cno</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <foreign-key id="261" parent="234" name="customeraccounts_ibfk_1">
+=======
+    <foreign-key id="261" parent="234" name="customeraccount_ibfk_1">
+>>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
       <ColNames>Cno</ColNames>
       <RefSchemaName>bank</RefSchemaName>
       <RefTableName>customer</RefTableName>
       <RefColNames>Cno</RefColNames>
     </foreign-key>
+<<<<<<< HEAD
     <foreign-key id="262" parent="234" name="customeraccounts_ibfk_2">
       <ColNames>Bno</ColNames>
       <RefSchemaName>bank</RefSchemaName>
@@ -1080,6 +1100,18 @@ Cno</ColNames>
       <ColNames>Ano</ColNames>
       <RefSchemaName>bank</RefSchemaName>
       <RefTableName>accounts</RefTableName>
+=======
+    <foreign-key id="262" parent="234" name="customeraccount_ibfk_2">
+      <ColNames>Bno</ColNames>
+      <RefSchemaName>bank</RefSchemaName>
+      <RefTableName>branch</RefTableName>
+      <RefColNames>Bno</RefColNames>
+    </foreign-key>
+    <foreign-key id="263" parent="234" name="customeraccount_ibfk_3">
+      <ColNames>Ano</ColNames>
+      <RefSchemaName>bank</RefSchemaName>
+      <RefTableName>account</RefTableName>
+>>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
       <RefColNames>Ano</RefColNames>
     </foreign-key>
     <column id="264" parent="235" name="Sno">
@@ -1123,7 +1155,11 @@ Cno</ColNames>
     <foreign-key id="271" parent="235" name="staff_ibfk_1">
       <ColNames>Bno</ColNames>
       <RefSchemaName>bank</RefSchemaName>
+<<<<<<< HEAD
       <RefTableName>branchs</RefTableName>
+=======
+      <RefTableName>branch</RefTableName>
+>>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
       <RefColNames>Bno</RefColNames>
     </foreign-key>
   </database-model>
