@@ -7,10 +7,6 @@
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-<<<<<<< HEAD
-      <secret-storage>master_key</secret-storage>
-=======
->>>>>>> 9fe8328b89faec93907acbc7487895e8776f8a04
       <user-name>root</user-name>
       <introspection-schemas>*:bank</introspection-schemas>
     </data-source>
