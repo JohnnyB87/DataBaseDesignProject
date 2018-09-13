@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c56728-0d26-4af7-86b9-d067d62338be" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/edf7a61f-1673-43b6-a24d-6ec382ed2637.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/edf7a61f-1673-43b6-a24d-6ec382ed2637.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Branch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Branch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/EditCell$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/EditCell$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/EditCell$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/EditCell$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/EditCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/EditCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/PaneFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/PaneFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/SQLQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/SQLQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Staff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/classes/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/BranchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/BranchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/JoinTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/JoinTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/SecondMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/SecondMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/StaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataBaseDesignProject/controllers/StaffController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,94 +31,70 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="DBDProjectDatabase" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DBDProjectDatabase" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DBDProjectDatabase" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="bank: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BranchController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/BranchController.java">
+      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+            <state relative-caret-position="17">
+              <caret line="84" selection-start-line="84" selection-end-line="88" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/edf7a61f-1673-43b6-a24d-6ec382ed2637/console.sql">
+      <file leaf-file-name="JoinTableController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/JoinTableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            <state relative-caret-position="918">
+              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+              <folding>
+                <element signature="method#initialize#0;class#JoinTableController#0" />
+                <element signature="method#fillComboBoxes#0;class#JoinTableController#0" />
+                <element signature="method#loopThroughTable#0;class#JoinTableController#0" />
+                <element signature="method#loopThroughTableCol#0;class#JoinTableController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DATABASE/edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank" pinned="false" current-in-tab="true">
-        <entry file="uml://DATABASE/edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank</OriginalElement>
-              <nodes>
-                <node x="282.0" y="380.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
-                <node x="179.0" y="190.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff</node>
-                <node x="0.0" y="190.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer</node>
-                <node x="185.55555555555557" y="0.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch</node>
-                <node x="359.0" y="212.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-                  <point x="0.0" y="-70.0" />
-                  <point x="79.5" y="165.0" />
-                  <point x="211.22222222222226" y="165.0" />
-                  <point x="-51.333333333333314" y="70.0" />
-                </edge>
-                <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-                  <point x="0.0" y="-70.0" />
-                  <point x="258.5" y="165.0" />
-                  <point x="262.55555555555554" y="165.0" />
-                  <point x="0.0" y="70.0" />
-                </edge>
-                <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer">
-                  <point x="-44.33333333333334" y="-59.0" />
-                  <point x="304.1666666666667" y="355.0" />
-                  <point x="79.5" y="355.0" />
-                  <point x="0.0" y="70.0" />
-                </edge>
-                <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-                  <point x="0.0" y="-59.0" />
-                  <point x="348.5" y="165.0" />
-                  <point x="313.8888888888889" y="165.0" />
-                  <point x="51.33333333333337" y="70.0" />
-                </edge>
-                <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account">
-                  <point x="44.333333333333314" y="-59.0" />
-                  <point x="392.8333333333333" y="355.0" />
-                  <point x="448.5" y="355.0" />
-                  <point x="0.0" y="48.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.8450704225352114" x="338.4916666666666" y="472.05833333333334" />
-              <SelectedNodes>
-                <node>edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
+      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaffController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/StaffController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1955">
+              <caret line="130" selection-start-line="130" selection-end-line="135" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/classes/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -231,7 +185,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -241,7 +195,59 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBaseDesignProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBaseDesignProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="viewDeleteUpdate" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -328,19 +334,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -364,6 +357,10 @@
       <workItem from="1525255334852" duration="13278000" />
       <workItem from="1525271010156" duration="3510000" />
       <workItem from="1525821837844" duration="32000" />
+      <workItem from="1525892760194" duration="1496000" />
+      <workItem from="1525947646353" duration="17000" />
+      <workItem from="1525947735258" duration="9773000" />
+      <workItem from="1527590839633" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="Started">
       <created>1524937720769</created>
@@ -481,11 +478,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141541000" />
+    <option name="totallyTimeSpent" value="152875000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="TODO" order="13" />
@@ -495,19 +491,19 @@
       <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="18" weight="0.32763532" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.4180418" />
       <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.41721132" />
       <window_info anchor="bottom" id="Terminal" order="17" />
       <window_info id="Capture Tool" order="10" />
       <window_info id="Designer" order="8" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.28884026" />
-      <window_info anchor="right" id="Database" order="12" visible="true" weight="0.35557988" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18070363" />
+      <window_info anchor="right" id="Database" order="12" visible="true" weight="0.018123668" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="11" />
       <window_info anchor="right" id="Theme Preview" order="11" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
       <window_info id="Favorites" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.3988604" />
       <window_info anchor="bottom" id="Messages" order="19" weight="0.33006537" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -520,34 +516,34 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
       <window_info anchor="bottom" id="Database Console" order="6" weight="0.494302" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2033557" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32763532" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37179488" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" id="Database" order="6" visible="true" weight="0.17718121" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32763532" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.33048433" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2033557" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,6 +577,70 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/edf7a61f-1673-43b6-a24d-6ec382ed2637/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank</OriginalElement>
+          <nodes>
+            <node x="0.0" y="190.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer</node>
+            <node x="282.0" y="380.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
+            <node x="359.0" y="212.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account</node>
+            <node x="185.55555555555557" y="0.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch</node>
+            <node x="179.0" y="190.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
+              <point x="0.0" y="-70.0" />
+              <point x="258.5" y="165.0" />
+              <point x="262.55555555555554" y="165.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
+              <point x="0.0" y="-59.0" />
+              <point x="348.5" y="165.0" />
+              <point x="313.8888888888889" y="165.0" />
+              <point x="51.33333333333337" y="70.0" />
+            </edge>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account">
+              <point x="44.333333333333314" y="-59.0" />
+              <point x="392.8333333333333" y="355.0" />
+              <point x="448.5" y="355.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
+              <point x="0.0" y="-70.0" />
+              <point x="79.5" y="165.0" />
+              <point x="211.22222222222226" y="165.0" />
+              <point x="-51.333333333333314" y="70.0" />
+            </edge>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer">
+              <point x="-44.33333333333334" y="-59.0" />
+              <point x="304.1666666666667" y="355.0" />
+              <point x="79.5" y="355.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8602150537634408" x="269.0" y="249.0" />
+          <SelectedNodes>
+            <node>edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
+          </SelectedNodes>
+          <Categories>
+            <Category />
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/BranchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -609,22 +669,10 @@
           </nodes>
           <notes />
           <edges>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-              <point x="0.0" y="-70.0" />
-              <point x="79.5" y="165.0" />
-              <point x="211.22222222222226" y="165.0" />
-              <point x="-51.333333333333314" y="70.0" />
-            </edge>
             <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
               <point x="0.0" y="-70.0" />
               <point x="258.5" y="165.0" />
               <point x="262.55555555555554" y="165.0" />
-              <point x="0.0" y="70.0" />
-            </edge>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer">
-              <point x="-44.33333333333334" y="-59.0" />
-              <point x="304.1666666666667" y="355.0" />
-              <point x="79.5" y="355.0" />
               <point x="0.0" y="70.0" />
             </edge>
             <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
@@ -639,15 +687,28 @@
               <point x="448.5" y="355.0" />
               <point x="0.0" y="48.0" />
             </edge>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
+              <point x="0.0" y="-70.0" />
+              <point x="79.5" y="165.0" />
+              <point x="211.22222222222226" y="165.0" />
+              <point x="-51.333333333333314" y="70.0" />
+            </edge>
+            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer">
+              <point x="-44.33333333333334" y="-59.0" />
+              <point x="304.1666666666667" y="355.0" />
+              <point x="79.5" y="355.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.8450704225352114" x="338.4916666666666" y="472.05833333333334" />
+          <settings layout="Hierarchic Group" zoom="0.8450704225352114" x="338.0" y="472.0" />
           <SelectedNodes>
             <node>edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
           </SelectedNodes>
           <Categories>
-            <Category>Key columns</Category>
+            <Category />
             <Category>Columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -748,39 +809,12 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/layout/BorderPane.java" />
     <entry file="file://$PROJECT_DIR$/src/interfaces/WindowInterface.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/javafx-src.zip!/javafx/event/EventHandler.java" />
-    <entry file="das://edf7a61f-1673-43b6-a24d-6ec382ed2637/schema/bank/table/accounts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://edf7a61f-1673-43b6-a24d-6ec382ed2637/schema/bank/table/accounts" />
     <entry file="file://$PROJECT_DIR$/src/controllers/Window.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/javafx/util/Callback.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/TableView.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/TablePosition.java" />
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/TableColumn.java" />
-    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/JoinTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/MainMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -795,20 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/StaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/EditCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45">
@@ -820,13 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="78" column="28" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -858,17 +871,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/BranchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+    <entry file="uml://DATABASE/edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank</OriginalElement>
+          <nodes>
+            <node x="" y="">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer</node>
+            <node x="" y="">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
+            <node x="" y="">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account</node>
+            <node x="" y="">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch</node>
+            <node x="" y="">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8450704225352111" x="347.0" y="472.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category />
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -879,59 +902,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>edf7a61f-1673-43b6-a24d-6ec382ed2637.SCHEMA:bank</OriginalElement>
-          <nodes>
-            <node x="282.0" y="380.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
-            <node x="179.0" y="190.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff</node>
-            <node x="0.0" y="190.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer</node>
-            <node x="185.55555555555557" y="0.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch</node>
-            <node x="359.0" y="212.0">edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-              <point x="0.0" y="-70.0" />
-              <point x="79.5" y="165.0" />
-              <point x="211.22222222222226" y="165.0" />
-              <point x="-51.333333333333314" y="70.0" />
-            </edge>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.staff" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-              <point x="0.0" y="-70.0" />
-              <point x="258.5" y="165.0" />
-              <point x="262.55555555555554" y="165.0" />
-              <point x="0.0" y="70.0" />
-            </edge>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customer">
-              <point x="-44.33333333333334" y="-59.0" />
-              <point x="304.1666666666667" y="355.0" />
-              <point x="79.5" y="355.0" />
-              <point x="0.0" y="70.0" />
-            </edge>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.branch">
-              <point x="0.0" y="-59.0" />
-              <point x="348.5" y="165.0" />
-              <point x="313.8888888888889" y="165.0" />
-              <point x="51.33333333333337" y="70.0" />
-            </edge>
-            <edge source="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount" target="edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.account">
-              <point x="44.333333333333314" y="-59.0" />
-              <point x="392.8333333333333" y="355.0" />
-              <point x="448.5" y="355.0" />
-              <point x="0.0" y="48.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8450704225352114" x="338.4916666666666" y="472.05833333333334" />
-          <SelectedNodes>
-            <node>edf7a61f-1673-43b6-a24d-6ec382ed2637.TABLE:bank.customeraccount</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
+    <entry file="file://$PROJECT_DIR$/src/controllers/BranchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/JoinTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+          <folding>
+            <element signature="method#initialize#0;class#JoinTableController#0" />
+            <element signature="method#fillComboBoxes#0;class#JoinTableController#0" />
+            <element signature="method#loopThroughTable#0;class#JoinTableController#0" />
+            <element signature="method#loopThroughTableCol#0;class#JoinTableController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/StaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="130" selection-start-line="130" selection-end-line="135" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/JoinTableWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/add/AccountWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/viewDeleteUpdate/AccountWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="24" selection-end-column="82" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="84" selection-start-line="84" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
